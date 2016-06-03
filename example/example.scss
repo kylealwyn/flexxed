@@ -1,10 +1,10 @@
 @import 'normalize';
 @import 'bold';
-@import 'agate';
+@import 'github-gist';
 
-$primary: #59C8F3;
+$primary: #795DA3;
 $dark: #224142;
-$bg: #EEE;
+$bg: #F9F9F9;
 
 body {
     box-sizing: border-box;
@@ -49,15 +49,13 @@ a:hover {
 
 pre {
     overflow-x: auto;
-    border: 1px solid darken($bg, 3%);
-    border-left-width: 5px;
     margin: 1.6em 0;
     font-size: .875em;
-    background: lighten($bg, 7.5%);
     white-space: pre;
     word-wrap: normal;
     max-height: 400px;
     overflow: auto;
+    box-shadow: 0 6px 19px rgba(black, 0.16);
 }
 
 code {
@@ -90,16 +88,16 @@ code {
 }
 
 .page-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+padding-top: 3rem;
+padding-bottom: 3rem;
 
-    &:nth-of-type(even) {
-        background: white;
-    }
+&:nth-of-type(odd) {
+    background: white;
+}
 
-    h2 {
-        text-transform: capitalize;
-    }
+h2 {
+    text-transform: capitalize;
+}
 }
 
 .page-features {
@@ -209,7 +207,7 @@ code {
 }
 
 .menu-link:hover {
-    color: #3298ff;
+    color: lighten($primary, 5%);
     border-bottom: 0;
 }
 
@@ -256,10 +254,6 @@ code {
     overflow: hidden;
     text-align: center;
     color: white;
-}
-
-.box-container {
-    background: none;
 }
 
 .box-row {

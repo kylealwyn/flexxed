@@ -7,7 +7,7 @@ html
   body
     mixin section(title, description)
       a(name=title)
-      section.page-section(id=title)
+      section.page-section.section-mixin(id=title)
         .container
           h2= title
           p= description
@@ -19,7 +19,18 @@ html
 
     .page
       .wrap
-        +section('responsive', 'Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs, sm, md & lg viewport widths.')
+        a(name='syntax')
+        section.page-section
+          .container
+            h2 Simple Syntax
+            p Row. Column. Content. That's all there is to it.
+            pre
+              code.section-code.html
+                .row
+                  .col
+                    h3 Look at me!
+
+        +section('responsive', 'Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.')
           .row
             .col-12.col-sm-3.col-md-2.col-lg-1
               .box-row
@@ -38,9 +49,9 @@ html
             .col-2.col-sm-6.col-md-4.col-lg-2
               .box-row
 
-        +section('fluid', 'Percent based widths allow fluid resizing of columns and rows.')
+        +section('fluid', 'Percent based widths enable smooth resizing.')
           .row
-            .col-12
+            .col
               .box-row
           .row
             .col-1
@@ -73,97 +84,82 @@ html
             .col-6
               .box-row
 
-        //- a(name='syntax')
-        //- section.page-section
-        //-   h2 Simple Syntax
-        //-   p All you need to remember is row, column, content.
-        //-   pre.
-        //- a(name='offsets')
-        //- section.page-section
-        //-   h2 Offsets
-        //-   p Offset a column
-        //-   .row
-        //-     .col-offset-11.col-1
-        //-       .box-row
-        //-   .row
-        //-     .col-offset-10.col-2
-        //-       .box-row
-        //-   .row
-        //-     .col-offset-9.col-3
-        //-       .box-row
-        //-   .row
-        //-     .col-offset-8.col-4
-        //-       .box-row
-        //-   .row
-        //-     .col-offset-7.col-5
-        //-       .box-row
-        //-   .row
-        //-     .col-offset-6.col-6
-        //-       .box-row
-        //-   .row
-        //-     .col-offset-5.col-7
-        //-       .box-row
-        //-   .row
-        //-     .col-offset-4.col-8
-        //-       .box-row
-        //-   .row
-        //-     .col-offset-3.col-9
-        //-       .box-row
-        //-   .row
-        //-     .col-offset-2.col-10
-        //-       .box-row
-        //-   .row
-        //-     .col-offset-1.col-11
-        //-       .box-row
-        //-   pre.
-        //- a(name='auto')
-        //- section.page-section
-        //-   h2 Auto Width
-        //-   p Add any number of auto sizing columns to a row. Let the grid figure it out.
-        //-   .row
-        //-     .col
-        //-       .box-row
-        //-     .col
-        //-       .box-row
-        //-   .row
-        //-     .col
-        //-       .box-row
-        //-     .col
-        //-       .box-row
-        //-     .col
-        //-       .box-row
-        //-   pre.
-        //- a(name='nested')
-        //- section.page-section
-        //-   h2 Nested Grids
-        //-   p Nest grids inside grids inside grids.
-        //-   .row
-        //-     .col-7
-        //-       .box.box-container
-        //-         .row
-        //-           .col-9
-        //-             .box-first.box-container
-        //-               .row
-        //-                 .col-4
-        //-                   .box-nested
-        //-                 .col-8
-        //-                   .box-nested
-        //-           .col-3
-        //-             .box-first.box-container
-        //-               .row
-        //-                 .col
-        //-                   .box-nested
-        //-     .col-5
-        //-       .box.box-container
-        //-         .row
-        //-           .col-12
-        //-             .box-first.box-container
-        //-               .row
-        //-                 .col-6
-        //-                   .box-nested
-        //-                 .col-6
-        //-                   .box-nested
-        //-   pre.
+        +section('offsets', 'Offset a column')
+          .row
+            .col-offset-11.col-1
+              .box-row
+          .row
+            .col-offset-10.col-2
+              .box-row
+          .row
+            .col-offset-9.col-3
+              .box-row
+          .row
+            .col-offset-8.col-4
+              .box-row
+          .row
+            .col-offset-7.col-5
+              .box-row
+          .row
+            .col-offset-6.col-6
+              .box-row
+          .row
+            .col-offset-5.col-7
+              .box-row
+          .row
+            .col-offset-4.col-8
+              .box-row
+          .row
+            .col-offset-3.col-9
+              .box-row
+          .row
+            .col-offset-2.col-10
+              .box-row
+          .row
+            .col-offset-1.col-11
+              .box-row
+
+        +section('auto', 'Add any number of generic columns to a row and let the grid be smart.')
+          .row
+            .col
+              .box-row
+            .col
+              .box-row
+          .row
+            .col
+              .box-row
+            .col
+              .box-row
+            .col
+              .box-row
+        +section('nested', 'Nest all the grids you want.')
+          .row
+            .col-7
+              .box.box-container
+                .row
+                  .col-9
+                    .box-first.box-container
+                      .row
+                        .col-4
+                          .box-nested
+                        .col-8
+                          .box-nested
+                  .col-3
+                    .box-first.box-container
+                      .row
+                        .col
+                          .box-nested
+            .col-5
+              .box.box-container
+                .row
+                  .col-12
+                    .box-first.box-container
+                      .row
+                        .col-6
+                          .box-nested
+                        .col-6
+                          .box-nested
+
         //- a(name='alignment')
         //- section.page-section
         //-   h2 Alignment
