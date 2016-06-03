@@ -11,6 +11,10 @@
   padding-left: $outer-margin;
 }
 
+.container {
+  max-width: $screen-sm;
+}
+
 .row {
   box-sizing: border-box;
   display: flex;

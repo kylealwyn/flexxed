@@ -1,0 +1,350 @@
+doctype html
+html
+  head
+    title
+    link(rel='stylesheet', type='text/css', href='example/example.css')
+    link(rel='stylesheet', type='text/css', href='dist/flexed.css')
+  body
+    mixin section(title, description)
+      a(name=title)
+      section.page-section(id=title)
+        .container
+          h2= title
+          p= description
+          div.section-example
+            block
+          pre
+            code.section-code.html
+              block
+
+    .page
+      .wrap
+        +section('responsive', 'Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs, sm, md & lg viewport widths.')
+          .row
+            .col-12.col-sm-3.col-md-2.col-lg-1
+              .box-row
+            .col-6.col-sm-6.col-md-8.col-lg-10
+              .box-row
+            .col-6.col-sm-3.col-md-2.col-lg-1
+              .box-row
+          .row
+            .col-12.col-sm-3.col-md-2.col-lg-1
+              .box-row
+            .col-12.col-sm-9.col-md-10.col-lg-11
+              .box-row
+          .row
+            .col-10.col-sm-6.col-md-8.col-lg-10
+              .box-row
+            .col-2.col-sm-6.col-md-4.col-lg-2
+              .box-row
+
+        +section('fluid', 'Percent based widths allow fluid resizing of columns and rows.')
+          .row
+            .col-12
+              .box-row
+          .row
+            .col-1
+              .box-row
+            .col-11
+              .box-row
+          .row
+            .col-2
+              .box-row
+            .col-10
+              .box-row
+          .row
+            .col-3
+              .box-row
+            .col-9
+              .box-row
+          .row
+            .col-4
+              .box-row
+            .col-8
+              .box-row
+          .row
+            .col-5
+              .box-row
+            .col-7
+              .box-row
+          .row
+            .col-6
+              .box-row
+            .col-6
+              .box-row
+
+        //- a(name='syntax')
+        //- section.page-section
+        //-   h2 Simple Syntax
+        //-   p All you need to remember is row, column, content.
+        //-   pre.
+        //- a(name='offsets')
+        //- section.page-section
+        //-   h2 Offsets
+        //-   p Offset a column
+        //-   .row
+        //-     .col-offset-11.col-1
+        //-       .box-row
+        //-   .row
+        //-     .col-offset-10.col-2
+        //-       .box-row
+        //-   .row
+        //-     .col-offset-9.col-3
+        //-       .box-row
+        //-   .row
+        //-     .col-offset-8.col-4
+        //-       .box-row
+        //-   .row
+        //-     .col-offset-7.col-5
+        //-       .box-row
+        //-   .row
+        //-     .col-offset-6.col-6
+        //-       .box-row
+        //-   .row
+        //-     .col-offset-5.col-7
+        //-       .box-row
+        //-   .row
+        //-     .col-offset-4.col-8
+        //-       .box-row
+        //-   .row
+        //-     .col-offset-3.col-9
+        //-       .box-row
+        //-   .row
+        //-     .col-offset-2.col-10
+        //-       .box-row
+        //-   .row
+        //-     .col-offset-1.col-11
+        //-       .box-row
+        //-   pre.
+        //- a(name='auto')
+        //- section.page-section
+        //-   h2 Auto Width
+        //-   p Add any number of auto sizing columns to a row. Let the grid figure it out.
+        //-   .row
+        //-     .col
+        //-       .box-row
+        //-     .col
+        //-       .box-row
+        //-   .row
+        //-     .col
+        //-       .box-row
+        //-     .col
+        //-       .box-row
+        //-     .col
+        //-       .box-row
+        //-   pre.
+        //- a(name='nested')
+        //- section.page-section
+        //-   h2 Nested Grids
+        //-   p Nest grids inside grids inside grids.
+        //-   .row
+        //-     .col-7
+        //-       .box.box-container
+        //-         .row
+        //-           .col-9
+        //-             .box-first.box-container
+        //-               .row
+        //-                 .col-4
+        //-                   .box-nested
+        //-                 .col-8
+        //-                   .box-nested
+        //-           .col-3
+        //-             .box-first.box-container
+        //-               .row
+        //-                 .col
+        //-                   .box-nested
+        //-     .col-5
+        //-       .box.box-container
+        //-         .row
+        //-           .col-12
+        //-             .box-first.box-container
+        //-               .row
+        //-                 .col-6
+        //-                   .box-nested
+        //-                 .col-6
+        //-                   .box-nested
+        //-   pre.
+        //- a(name='alignment')
+        //- section.page-section
+        //-   h2 Alignment
+        //-   p
+        //-     | Add classes to align elements to the start or end of a row as well as the top, bottom, or center of a column
+        //-   h3
+        //-     code .start-
+        //-   .row
+        //-     .col-12
+        //-       .box.box-container
+        //-         .row.justify-start
+        //-           .col-6
+        //-             .box-nested
+        //-   pre.
+        //-   h3
+        //-     code .center-
+        //-   .row
+        //-     .col-12
+        //-       .box.box-container
+        //-         .row.justify-center
+        //-           .col-6
+        //-             .box-nested
+        //-   pre.
+        //-   h3
+        //-     code .end-
+        //-   .row
+        //-     .col-12
+        //-       .box.box-container
+        //-         .row.justify-end
+        //-           .col-6
+        //-             .box-nested
+        //-   pre.
+        //-   p
+        //-     | Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes.
+        //-   .row
+        //-     .col-12
+        //-       .box.box-container
+        //-         .row.justify-center.justify-end-sm.justify-start-lg
+        //-           .col-6
+        //-             .box-nested
+        //-   | Example
+        //-   pre.
+        //-   h3
+        //-     code .align-top-
+        //-   .row.align-top
+        //-     .col-6
+        //-       .box-large
+        //-     .col-6
+        //-       .box
+        //-   pre.
+        //-   h3
+        //-     code .align-middle-
+        //-   .row.align-middle
+        //-     .col-6
+        //-       .box-large
+        //-     .col-6
+        //-       .box
+        //-   pre.
+        //-   h3
+        //-     code .bottom-
+        //-   .row.align-bottom
+        //-     .col-6
+        //-       .box-large
+        //-     .col-6
+        //-       .box
+        //-   pre.
+        //- a(name='distribution')
+        //- section.page-section
+        //-   h2 Distribution
+        //-   p Add classes to distribute the contents of a row or column.
+        //-   h3
+        //-     code .space-around-
+        //-   .row
+        //-     .col-12
+        //-       .box.box-container
+        //-         .row.space-around
+        //-           .col-2
+        //-             .box-nested
+        //-           .col-2
+        //-             .box-nested
+        //-           .col-2
+        //-             .box-nested
+        //-   pre.
+        //-   h3
+        //-     code .space-between-
+        //-   .row
+        //-     .col-12
+        //-       .box.box-container
+        //-         .row.space-between
+        //-           .col-2
+        //-             .box-nested
+        //-           .col-2
+        //-             .box-nested
+        //-           .col-2
+        //-             .box-nested
+        //-   pre.
+        //- a(name='reordering')
+        //- section.page-section
+        //-   h2 Reordering
+        //-   p Add classes to reorder columns.
+        //-   h3
+        //-     code .first-
+        //-   .row
+        //-     .col-12
+        //-       .box.box-container
+        //-         .row
+        //-           .col-2
+        //-             .box-first 1
+        //-           .col-2
+        //-             .box-first 2
+        //-           .col-2
+        //-             .box-first 3
+        //-           .col-2
+        //-             .box-first 4
+        //-           .col-2
+        //-             .box-first 5
+        //-           .col-2.first
+        //-             .box-nested 6
+        //-   pre.
+        //-   h3
+        //-     code .last-
+        //-   .row
+        //-     .col-12
+        //-       .box.box-container
+        //-         .row
+        //-           .col-2.last
+        //-             .box-nested 1
+        //-           .col-2
+        //-             .box-first 2
+        //-           .col-2
+        //-             .box-first 3
+        //-           .col-2
+        //-             .box-first 4
+        //-           .col-2
+        //-             .box-first 5
+        //-           .col-2
+        //-             .box-first 6
+        //-   pre.
+        //- a(name='reversing')
+        //- section.page-section
+        //-   h2 Reversing
+        //-   h3
+        //-     code .reverse
+        //-   .row
+        //-     .col-12
+        //-       .box.box-container
+        //-         .row.reverse
+        //-           .col-2
+        //-             .box-nested 1
+        //-           .col-2
+        //-             .box-nested 2
+        //-           .col-2
+        //-             .box-nested 3
+        //-           .col-2
+        //-             .box-nested 4
+        //-           .col-2
+        //-             .box-nested 5
+        //-           .col-2
+        //-             .box-nested 6
+        //-   pre.
+        //- a(name='columns')
+        //- section.page-section
+        //-   h2 Columns
+        //-   h3
+        //-     code .column
+        //-   .row
+        //-     .col-12
+        //-       .box.box-container
+        //-         .row.column
+        //-           .col-4
+        //-             .box-nested 1
+        //-           .row.justify-center
+        //-             .col-4
+        //-               .box-nested 2
+        //-           .row.justify-end
+        //-             .col-4
+        //-               .box-nested 3
+        //-       pre.
+        //-         \n
+
+    script(src="example/highlight.pack.js")
+    script(src="example/index.js")
+
+

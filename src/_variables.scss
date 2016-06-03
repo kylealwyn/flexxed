@@ -4,17 +4,17 @@ $half-gutter-width: calc(#{$gutter-width} / 2);
 $gutter-compensation: calc(#{$gutter-width} / 2 * -1);
 $outer-margin: calc(#{$gutter-width} * 2);
 
-$sm-width: 48em;
-$md-width: 64em;
-$lg-width: 75em;
-$xl-width: 84em;
+$screen-sm: 48em;
+$screen-md: 64em;
+$screen-lg: 75em;
+$screen-xl: 84em;
 
 $screens: (
   all: 0,
-  sm: $sm-width,
-  md: $md-width,
-  lg: $lg-width,
-  xl: $xl-width
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg,
+  xl: $screen-xl
 );
 
 $alignments: (
