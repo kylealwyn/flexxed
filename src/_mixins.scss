@@ -1,0 +1,11 @@
+@mixin grid($screen, $width) {
+  @if $screen == all {
+    @content;
+  }
+
+  @else {
+    @media (min-width: #{$width}) {
+      @content;
+    }
+  }
+}
