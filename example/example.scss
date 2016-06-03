@@ -86,8 +86,7 @@ code {
 }
 
 .page-section {
-padding-top: 3rem;
-padding-bottom: 3rem;
+padding: 3rem 1rem;
 
 &:nth-of-type(odd) {
     background: white;
@@ -297,6 +296,16 @@ h2 {
 .visible-xs {
   display: block;
   visibility: visible;
+}
+
+.section-code-example {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+
+  h3 {
+  font-family: monospace;
+
+  }
 }
 
 @media only screen and (min-width: 48rem) {

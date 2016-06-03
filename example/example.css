@@ -259,8 +259,7 @@ pre {
   box-sizing: border-box; }
 
 .page-section {
-  padding-top: 3rem;
-  padding-bottom: 3rem; }
+  padding: 3rem 1rem; }
   .page-section:nth-of-type(odd) {
     background: white; }
   .page-section h2 {
@@ -439,6 +438,12 @@ pre {
 .visible-xs {
   display: block;
   visibility: visible; }
+
+.section-code-example {
+  margin-top: 1rem;
+  margin-bottom: 3rem; }
+  .section-code-example h3 {
+    font-family: monospace; }
 
 @media only screen and (min-width: 48rem) {
   body {

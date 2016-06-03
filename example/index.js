@@ -15,10 +15,13 @@ function escapeHTML(string) {
 
 function escapeCodeBlocks() {
   var sections = document.querySelectorAll('.page-section');
-  [].slice.call(sections).forEach(function (section) {
-    var sectionExample = section.querySelector('.section-code');
-    var sectionCode = section.querySelector('.section-code');
-    sectionCode.innerHTML = escapeHTML(sectionCode.innerHTML);
+  [].forEach.call(sections, function (section) {
+    var sectionCodeBlocks = section.querySelectorAll('.section-code');
+    if (sectionCodeBlocks.length) {
+      [].forEach.call(sectionCodeBlocks, function (codeBlock) {
+        codeBlock.innerHTML = escapeHTML(codeBlock.innerHTML);
+      })
+    }
   });
 }
 

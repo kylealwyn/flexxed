@@ -48,9 +48,9 @@ gulp.task('sass', () => {
 
 gulp.task('dist', ['sass'], () => {
   return gulp.src(join(paths.dist,  `${libName}.css`))
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(cleanCSS())
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(paths.dist))
 });
