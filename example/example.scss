@@ -7,84 +7,82 @@ $dark: #224142;
 $bg: #F9F9F9;
 
 body {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
-    font-family: HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-    font-weight: 400;
-    background: $bg;
-    line-height: 1.4rem
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-weight: 400;
+  background: $bg;
+  line-height: 1.4rem
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: Gibson,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-    color: $dark;
+  font-family: Gibson,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  color: $dark;
 }
 
 h2 {
-    font-size: 2rem;
-    margin: 1rem 0
+  font-size: 2rem;
+  margin: 1rem 0
 }
 
 :focus {
-    outline-color: transparent;
-    outline-style: none
+  outline-color: transparent;
+  outline-style: none
 }
 
 h2+p {
-    margin: 0 0 2rem
+  margin: 0 0 2rem
 }
 
 a {
-    text-decoration: none;
-    color: $primary;
-    padding: 0 0 .2rem;
-    font-weight: 700
+  text-decoration: none;
+  color: $primary;
+  padding: 0 0 .2rem;
+  font-weight: 700
 }
 
 a:hover {
-    color: $primary
+  color: $primary
 }
 
 pre {
-    overflow-x: auto;
-    margin: 1.6em 0;
-    font-size: .875em;
-    white-space: pre;
-    word-wrap: normal;
-    max-height: 400px;
-    overflow: auto;
-    box-shadow: 0 6px 19px rgba(black, 0.16);
+  overflow-x: auto;
+  margin: 1.6em 0;
+  font-size: .875em;
+  white-space: pre;
+  word-wrap: normal;
+  max-height: 400px;
+  overflow: auto;
+  box-shadow: 0 6px 19px rgba(black, 0.16);
 }
 
 code {
-
-    // color: $primary;
-
+  // color: $primary;
 }
 
 .layout {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column
 }
 
 .page-nav {
-    box-sizing: border-box;
-    position: fixed;
-    padding: .5rem;
-    width: 100%;
-    background: 0 0
+  box-sizing: border-box;
+  position: fixed;
+  padding: .5rem;
+  width: 100%;
+  background: 0 0
 }
 
 .page {
-    z-index: 0;
-    background: $bg
+  z-index: 0;
+  background: $bg
 }
 
 .wrap {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .page-section {
@@ -184,157 +182,157 @@ h2 {
 }
 
 .menu-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .menu-list-item {
-    height: 3rem;
-    line-height: 3rem;
-    font-size: 1rem;
-    color: $primary;
-    background: 0 0;
-    transition: all .2s ease-in;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1rem;
+  color: $primary;
+  background: 0 0;
+  transition: all .2s ease-in;
 }
 
 .menu-link {
-    box-sizing: border-box;
-    padding-left: 3rem;
-    display: block;
-    color: $primary;
-    transition: color .2s ease-in;
+  box-sizing: border-box;
+  padding-left: 3rem;
+  display: block;
+  color: $primary;
+  transition: color .2s ease-in;
 }
 
 .menu-link:hover {
-    color: lighten($primary, 5%);
-    border-bottom: 0;
+  color: lighten($primary, 5%);
+  border-bottom: 0;
 }
 
 .link-top {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .button {
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    min-width: 11rem;
-    padding: 0 4rem;
-    margin: 1rem;
-    height: 3rem;
-    line-height: 3rem;
-    border: 1px solid $primary;
-    border-radius: 2px;
-    color: $primary;
-    font-size: 1.25rem;
-    transition: background-color,.15s
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 11rem;
+  padding: 0 4rem;
+  margin: 1rem;
+  height: 3rem;
+  line-height: 3rem;
+  border: 1px solid $primary;
+  border-radius: 2px;
+  color: $primary;
+  font-size: 1.25rem;
+  transition: background-color,.15s
 }
 
 .button:hover {
-    background: lighten($primary, 5%);
-    border-color: lighten($primary, 5%);
-    color: white;
-    text-shadow: 0 1px $primary;
+  background: lighten($primary, 5%);
+  border-color: lighten($primary, 5%);
+  color: white;
+  text-shadow: 0 1px $primary;
 }
 
 .button:active {
-    background: $primary;
-    color: white;
-    border-top: 2px solid darken($primary, 5%);
+  background: $primary;
+  color: white;
+  border-top: 2px solid darken($primary, 5%);
 }
 
 .box,.box-first,.box-large,.box-nested,.box-row {
-    position: relative;
-    box-sizing: border-box;
-    min-height: 1rem;
-    margin-bottom: 0;
-    background: $primary;
-    border-radius: 2px;
-    overflow: hidden;
-    text-align: center;
-    color: white;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 1rem;
+  margin-bottom: 0;
+  background: $primary;
+  border-radius: 2px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
 }
 
 .box-row {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .box-first {
-    background: darken($primary, 10%);
+  background: darken($primary, 10%);
 }
 
 .box-nested {
-    background: darken($primary, 20%);
+  background: darken($primary, 20%);
 }
 
 .box-large {
-    height: 8rem;
+  height: 8rem;
 }
 
 .box-container {
-    box-sizing: border-box;
-    padding: .5rem;
+  box-sizing: border-box;
+  padding: .5rem;
 }
 
 .page-footer {
-    box-sizing: border-box;
-    padding-bottom: 3rem;
+  box-sizing: border-box;
+  padding-bottom: 3rem;
 }
 
 .tag {
-    color: black;
-    font-weight: 400;
+  color: black;
+  font-weight: 400;
 }
 
 .end {
-    text-align: end;
+  text-align: end;
 }
 
 .invisible-xs {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 
 .visible-xs {
-    display: block;
-    visibility: visible;
+  display: block;
+  visibility: visible;
 }
 
 @media only screen and (min-width: 48rem) {
-    body {
-        font-size:16px;
-    }
+  body {
+    font-size:16px;
+  }
 
-    .slide-menu {
-        width: 25%;
-    }
+  .slide-menu {
+    width: 25%;
+  }
 
-    .open {
-        transform: translate3d(0,0,0)
-    }
+  .open {
+    transform: translate3d(0,0,0)
+  }
 
-    .hero-headline {
-        font-size: 6rem;
-        margin-bottom: 2rem
-    }
+  .hero-headline {
+    font-size: 6rem;
+    margin-bottom: 2rem
+  }
 
-    .hero-copy {
-        font-size: 1.25rem;
-        margin-bottom: 2rem
-    }
+  .hero-copy {
+    font-size: 1.25rem;
+    margin-bottom: 2rem
+  }
 
-    .box,.box-first,.box-large,.box-nested,.box-row {
-        padding: 1rem
-    }
+  .box,.box-first,.box-large,.box-nested,.box-row {
+    padding: 1rem
+  }
 
-    .invisible-md {
-        display: none;
-        visibility: hidden
-    }
+  .invisible-md {
+    display: none;
+    visibility: hidden
+  }
 
-    .visible-md {
-        display: block;
-        visibility: visible
-    }
+  .visible-md {
+    display: block;
+    visibility: visible
+  }
 }

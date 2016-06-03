@@ -7,7 +7,7 @@ var entityMap = {
    "/": '&#x2F;'
  };
 
- function escapeHTML(string) {
+function escapeHTML(string) {
    return String(string).replace(/[&<>"'\/]/g, function (s) {
      return entityMap[s];
    });
