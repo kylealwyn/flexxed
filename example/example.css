@@ -200,7 +200,7 @@ body {
   font-size: 18px;
   font-family: HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   font-weight: 400;
-  background: #ffffff;
+  background: #F4F3F2;
   line-height: 1.4rem; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -235,7 +235,7 @@ pre {
   word-wrap: normal;
   max-height: 400px;
   overflow: auto;
-  box-shadow: 0 6px 19px rgba(0, 0, 0, 0.16); }
+  box-shadow: 0 8px 15px rgba(34, 65, 66, 0.24); }
 
 .layout {
   display: -ms-flexbox;
@@ -253,7 +253,7 @@ pre {
 
 .page {
   z-index: 0;
-  background: #ffffff; }
+  background: #F4F3F2; }
 
 .wrap {
   box-sizing: border-box; }
@@ -291,7 +291,7 @@ pre {
   border-radius: 2px; }
 
 .menu-button:active {
-  background: #ffffff;
+  background: #F4F3F2;
   border: 1px solid transparent; }
 
 .open {
@@ -337,7 +337,7 @@ pre {
 .menu-header {
   box-sizing: border-box;
   padding: 3rem 3rem 0;
-  color: #ffffff; }
+  color: #F4F3F2; }
 
 .menu-list {
   margin: 0;
@@ -444,6 +444,12 @@ pre {
   margin-bottom: 3rem; }
   .section-code-example h3 {
     font-family: monospace; }
+
+.highlight {
+  background: #795DA3;
+  border-radius: 4px;
+  color: white;
+  padding: 0.5em; }
 
 @media only screen and (min-width: 48rem) {
   body {

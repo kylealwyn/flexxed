@@ -38,29 +38,29 @@ html
             .hero-buttons
               button()
 
-        a(name="installation")
+        a(name="installing")
         section.page-section
           .container
             h2 Installation
             .row
               .col.col-sm-6
                 h3 Bower
-                code bower install --save flexxed
+                code.highlight bower install --save flexxed
               .col.col-sm-6
                 h3 NPM
-                code npm install --save flexxed
+                code.highlight npm install --save flexxed
         a(name='syntax')
         section.page-section
           .container
-            h2 Simple Syntax
-            p Row. Column. Content. That's all there is to it.
+            h2 Syntactically Simple
+            p Row. Column. Content. That's it.
             pre
               code.section-code.html
                 .row
                   .col
                     h3 Look at me!
 
-        +section('responsive', 'Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.')
+        +section('responsivity', 'Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.')
           .row
             .col-12.col-sm-3.col-md-2.col-lg-1
               .box-row
@@ -79,7 +79,7 @@ html
             .col-2.col-sm-6.col-md-4.col-lg-2
               .box-row
 
-        +section('fluid', 'Percent based widths enable smooth resizing.')
+        +section('fluidity', 'Percent based widths enable smooth and dynamic resizing.')
           .row
             .col
               .box-row
@@ -114,7 +114,7 @@ html
             .col-6
               .box-row
 
-        +section('offsets', 'Offset a column')
+        +section('offsetting', 'Push columns')
           .row
             .col-offset-11.col-1
               .box-row
@@ -149,7 +149,7 @@ html
             .col-offset-1.col-11
               .box-row
 
-        +section('auto', 'Add any number of generic columns to a row and let the grid be smart.')
+        +section('automatic', 'Add any number of generic columns to a row and let the grid do the math for you.')
           .row
             .col
               .box-row
@@ -163,7 +163,7 @@ html
             .col
               .box-row
 
-        +section('nested', 'Nest all the grids you want.')
+        +section('nestable', 'Nest all the grids you want.')
           .row
             .col-7
               .box.box-container
@@ -327,7 +327,7 @@ html
                       .col-2
                         .box-nested 6
 
-          +section('columns', 'Stack \'em all up.')
+          +section('stacking', 'Stack \'em all up.')
             +code('.row.columns-*')
               .row
                 .col-12
