@@ -200,7 +200,7 @@ body {
   font-size: 18px;
   font-family: HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   font-weight: 400;
-  background: #F9F9F9;
+  background: #ffffff;
   line-height: 1.4rem; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -253,7 +253,7 @@ pre {
 
 .page {
   z-index: 0;
-  background: #F9F9F9; }
+  background: #ffffff; }
 
 .wrap {
   box-sizing: border-box; }
@@ -291,7 +291,7 @@ pre {
   border-radius: 2px; }
 
 .menu-button:active {
-  background: #F9F9F9;
+  background: #ffffff;
   border: 1px solid transparent; }
 
 .open {
@@ -337,7 +337,7 @@ pre {
 .menu-header {
   box-sizing: border-box;
   padding: 3rem 3rem 0;
-  color: #F9F9F9; }
+  color: #ffffff; }
 
 .menu-list {
   margin: 0;
