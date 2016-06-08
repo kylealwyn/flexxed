@@ -1,0 +1,35 @@
+$spacings: (
+  0: 0,
+  xs: 8px,
+  sm: 16px,
+  md: 32px,
+  lg: 42px,
+  xl: 60px
+);
+
+$sides: (
+  top: t,
+  bottom: b,
+  left: l,
+  right: r
+);
+
+@each $size, $px in $spacings {
+  @each $side, $name in $sides {
+    .m-#{$size} {
+      margin: #{$px} !important;
+    }
+
+    .p-#{$size} {
+      padding: #{$px} !important;
+    }
+
+    .m-#{$name}-#{$size} {
+      margin-#{$side}: #{$px} !important;
+    }
+
+    .p-#{$name}-#{$size} {
+      padding-#{$side}: #{$px} !important;
+    }
+  }
+}

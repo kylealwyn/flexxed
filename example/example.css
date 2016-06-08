@@ -416,6 +416,9 @@ pre {
 .box-large {
   height: 8rem; }
 
+.box-fill {
+  height: 100%; }
+
 .box-container {
   box-sizing: border-box;
   padding: .5rem; }
@@ -450,6 +453,16 @@ pre {
   border-radius: 4px;
   color: white;
   padding: 0.5em; }
+
+#page-hero {
+  background: #795DA3;
+  text-align: center; }
+  #page-hero h1 {
+    color: white;
+    font-size: 48px; }
+  #page-hero p {
+    font-size: 18px;
+    color: white; }
 
 @media only screen and (min-width: 48rem) {
   body {

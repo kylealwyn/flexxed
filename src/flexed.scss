@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_mixins';
+@import '_spacing';
 
 .container-fluid, .container {
   margin-right: auto;
@@ -23,18 +24,6 @@
   flex-wrap: wrap;
   margin-right: $gutter-compensation;
   margin-left: $gutter-compensation;
-}
-
-.row.reverse {
-  flex-direction: row-reverse;
-}
-
-.row.column {
-  flex-direction: column;
-}
-
-.col.reverse {
-  flex-direction: column-reverse;
 }
 
 [class*=col] {
@@ -81,3 +70,23 @@
   }
 }
 
+
+.flex {
+  display: flex;
+}
+
+.fill {
+  flex: 1;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.col.reverse {
+  flex-direction: column-reverse;
+}

@@ -269,6 +269,10 @@ h2 {
   height: 8rem;
 }
 
+.box-fill {
+  height: 100%;
+}
+
 .box-container {
   box-sizing: border-box;
   padding: .5rem;
@@ -313,6 +317,20 @@ h2 {
   border-radius: 4px;
   color: white;
   padding: 0.5em;
+}
+
+#page-hero {
+  background: $primary;
+  text-align: center;
+  h1 {
+    color: white;
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 18px;
+    color: white;
+  }
 }
 
 @media only screen and (min-width: 48rem) {

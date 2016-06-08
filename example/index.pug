@@ -3,7 +3,8 @@ html
   head
     title
     link(rel='stylesheet', type='text/css', href='example/example.css')
-    link(rel='stylesheet', type='text/css', href='dist/flexed.min.css')
+    link(rel='stylesheet', type='text/css', href='dist/flexed.css')
+
   body
     mixin code(className)
       div.section-code-example
@@ -31,7 +32,7 @@ html
     .page
       .wrap
         a(name="hero")
-        section.page-section
+        section#page-hero.page-section
           .container
             h1 Get Flexxed
             p.hero-description The last grid you'll ever need.
@@ -45,10 +46,11 @@ html
             .row
               .col.col-sm-6
                 h3 Bower
-                code.highlight bower install --save flexxed
+                code bower install --save flexxed
               .col.col-sm-6
                 h3 NPM
-                code.highlight npm install --save flexxed
+                code npm install --save flexxed
+
         a(name='syntax')
         section.page-section
           .container
@@ -116,37 +118,37 @@ html
 
         +section('offsetting', 'Push columns')
           .row
-            .col-offset-11.col-1
+            .col-1.col-offset-11
               .box-row
           .row
-            .col-offset-10.col-2
+            .col-2.col-offset-10
               .box-row
           .row
-            .col-offset-9.col-3
+            .col-3.col-offset-9
               .box-row
           .row
-            .col-offset-8.col-4
+            .col-4.col-offset-8
               .box-row
           .row
-            .col-offset-7.col-5
+            .col-5.col-offset-7
               .box-row
           .row
-            .col-offset-6.col-6
+            .col-6.col-offset-6
               .box-row
           .row
-            .col-offset-5.col-7
+            .col-7.col-offset-5
               .box-row
           .row
-            .col-offset-4.col-8
+            .col-8.col-offset-4
               .box-row
           .row
-            .col-offset-3.col-9
+            .col-9.col-offset-3
               .box-row
           .row
-            .col-offset-2.col-10
+            .col-10.col-offset-2
               .box-row
           .row
-            .col-offset-1.col-11
+            .col-11.col-offset-1
               .box-row
 
         +section('automatic', 'Add any number of generic columns to a row and let the grid do the math for you.')
@@ -248,30 +250,36 @@ html
 
         +section('distribution', 'Easily give your elements some room to breathe.', true)
           +code('.space-around-*')
-            .row
-              .col-12
-                .box.box-container
-                  .row.space-around
-                    .col-2
-                      .box-nested
-                    .col-2
-                      .box-nested
-                    .col-2
-                      .box-nested
+            .box.box-container
+              .row.space-around
+                .col-2
+                  .box-nested
+                .col-2
+                  .box-nested
+                .col-2
+                  .box-nested
 
           +code('.space-between-*')
-            .row
-              .col-12
-                .box.box-container
-                  .row.space-between
-                    .col-2
-                      .box-nested
-                    .col-2
-                      .box-nested
-                    .col-2
-                      .box-nested
+            .box.box-container
+              .row.space-between
+                .col-2
+                  .box-nested
+                .col-2
+                  .box-nested
+                .col-2
+                  .box-nested
 
-        +section('reordering', 'Sometimes your columns need to jump around.', true)
+          p Sometimes we just need to fill some extra space. We used to use clearfixes and floats in order to achieve this, but we can now use a filler #[tt .col]
+          +code
+            .box.box-container
+              .row
+                .col
+                  .box-nested
+                .col
+                .col
+                  .box-nested
+
+        +section('reordering', 'Mix \'em up.', true)
           +code('.first-*')
             .row
               .col-12
@@ -308,39 +316,61 @@ html
                     .col-2
                       .box-first 6
 
-          +section('reversing', 'Sometimes you want to start with z.', true)
-            +code('.row.reverse-*')
-              .row
-                .col-12
-                  .box.box-container
-                    .row.reverse
-                      .col-2
-                        .box-nested 1
-                      .col-2
-                        .box-nested 2
-                      .col-2
-                        .box-nested 3
-                      .col-2
-                        .box-nested 4
-                      .col-2
-                        .box-nested 5
-                      .col-2
-                        .box-nested 6
+        +section('reversing', 'Flip \'em around.', true)
+          +code('.row.reverse-*')
+            .row
+              .col-12
+                .box.box-container
+                  .row.reverse
+                    .col-2
+                      .box-nested 1
+                    .col-2
+                      .box-nested 2
+                    .col-2
+                      .box-nested 3
+                    .col-2
+                      .box-nested 4
+                    .col-2
+                      .box-nested 5
+                    .col-2
+                      .box-nested 6
 
-          +section('stacking', 'Stack \'em all up.')
-            +code('.row.columns-*')
+        +section('stacking', 'By default, rows layout columns horizontally. However, many layouts call for a mix of the two.', true)
+          +code('.vertical-*')
+            .box.box-container
               .row
+                .col.flex
+                  .box-nested.fill
+                .col.flex
+                  .box-nested.fill
+                .col
+                  .row.vertical
+                    .col.m-b-sm
+                      .box-nested
+                    .col
+                      .box-nested
+
+
+        +section('spacing', 'Give \'em some room to breathe.', true)
+          h3 Margins
+          +code('.m-*-*')
+            .box.box-container
+              .row
+                .col-12.m-b-sm
+                  .box-nested .m-b-sm
                 .col-12
-                  .box.box-container
-                    .row.column
-                      .col-4
-                        .box-nested 1
-                      .row.justify-center
-                        .col-4
-                          .box-nested 2
-                      .row.justify-end
-                        .col-4
-                          .box-nested 3
+                  .box-nested
+
+          h3 Padding
+          +code('.p-*-*')
+            .box.box-container
+              .row
+                .col-12.m-b-sm
+                  .box-nested.p-xl .p-xl
+                .col-12
+                  .box-nested.p-t-lg .p-t-sm
+
+
 
     script(src="example/highlight.pack.js")
     script(src="example/index.js")
