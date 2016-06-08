@@ -1,15 +1,31 @@
 {
-  "name": "flexgrid",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "flexxed",
+  "version": "0.1.0",
+  "description": "The last grid you'll ever need.",
+  "style": "dist/flexxed.css",
+  "main": "dist/flexboxgrid.css",
   "scripts": {
     "start": "gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alwynsays/flexxed.git"
+  },
+  "keywords": [
+    "flexbox",
+    "flexxed",
+    "flexbox",
+    "grid",
+    "css",
+    "scss"
+  ],
+  "author": "@alwynsays",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alwynsays/flexxed/issues"
+  },
+  "homepage": "https://github.com/alwynsays/flexxed",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",

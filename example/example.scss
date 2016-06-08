@@ -32,7 +32,7 @@ h2 {
   outline-style: none
 }
 
-h2+p {
+h2 + p {
   margin: 0 0 2rem
 }
 
@@ -136,20 +136,6 @@ h2 {
     height: 2rem
 }
 
-.hero {
-    box-sizing: border-box;
-    padding: 2rem;
-    background: white;
-    border: 1px solid white;
-    border-radius: 2px
-}
-
-.hero-headline {
-    font-size: 3rem;
-    white-space: nowrap;
-    margin-bottom: 0;
-}
-
 .hero-copy {
     font-size: 1rem;
     margin-bottom: 0;
@@ -213,18 +199,16 @@ h2 {
 }
 
 .button {
+  background: lighten($primary, 10%);
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   min-width: 11rem;
   padding: 0 4rem;
-  margin: 1rem;
-  height: 3rem;
-  line-height: 3rem;
-  border: 1px solid $primary;
-  border-radius: 2px;
-  color: $primary;
-  font-size: 1.25rem;
+  border-radius: 26px;
+  color: white;
+  padding: 8px 4px;
+  text-align: center;
   transition: background-color,.15s
 }
 
@@ -236,9 +220,8 @@ h2 {
 }
 
 .button:active {
-  background: $primary;
+  background: darken($primary, 10%);
   color: white;
-  border-top: 2px solid darken($primary, 5%);
 }
 
 .box,.box-first,.box-large,.box-nested,.box-row {
@@ -322,14 +305,17 @@ h2 {
 #page-hero {
   background: $primary;
   text-align: center;
+
   h1 {
     color: white;
     font-size: 48px;
+    margin-bottom: 4px;
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     color: white;
+    font-weight: lighter;
   }
 }
 

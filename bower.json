@@ -1,0 +1,26 @@
+{
+  "name": "flexxed",
+  "description": "The last grid you'll ever need.",
+  "main": "dist/flexboxgrid.css",
+  "authors": [
+    "@alwynsays"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "flexbox",
+    "flexxed",
+    "flexbox",
+    "grid",
+    "css",
+    "scss"
+  ],
+  "moduleType": [],
+  "homepage": "https://github.com/alwynsays/flexxed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

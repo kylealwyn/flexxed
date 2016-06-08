@@ -301,18 +301,6 @@ pre {
   width: 2rem;
   height: 2rem; }
 
-.hero {
-  box-sizing: border-box;
-  padding: 2rem;
-  background: white;
-  border: 1px solid white;
-  border-radius: 2px; }
-
-.hero-headline {
-  font-size: 3rem;
-  white-space: nowrap;
-  margin-bottom: 0; }
-
 .hero-copy {
   font-size: 1rem;
   margin-bottom: 0;
@@ -368,18 +356,16 @@ pre {
       align-self: flex-end; }
 
 .button {
+  background: #947eb5;
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   min-width: 11rem;
   padding: 0 4rem;
-  margin: 1rem;
-  height: 3rem;
-  line-height: 3rem;
-  border: 1px solid #795DA3;
-  border-radius: 2px;
-  color: #795DA3;
-  font-size: 1.25rem;
+  border-radius: 26px;
+  color: white;
+  padding: 8px 4px;
+  text-align: center;
   transition: background-color,.15s; }
 
 .button:hover {
@@ -389,9 +375,8 @@ pre {
   text-shadow: 0 1px #795DA3; }
 
 .button:active {
-  background: #795DA3;
-  color: white;
-  border-top: 2px solid #6d5393; }
+  background: #614a83;
+  color: white; }
 
 .box, .box-first, .box-large, .box-nested, .box-row {
   position: relative;
@@ -459,10 +444,12 @@ pre {
   text-align: center; }
   #page-hero h1 {
     color: white;
-    font-size: 48px; }
+    font-size: 48px;
+    margin-bottom: 4px; }
   #page-hero p {
-    font-size: 18px;
-    color: white; }
+    font-size: 16px;
+    color: white;
+    font-weight: lighter; }
 
 @media only screen and (min-width: 48rem) {
   body {
