@@ -35,14 +35,18 @@
 
 @each $screen, $width in $screens {
   @include grid($screen, $width) {
-    $columnPrefix: '.col';
-    // $column: if($screen == all, $columnPrefix, #{$columnPrefix}-#{$screen});
-    $column: #{$columnPrefix}-#{$screen};
 
-    #{$column} {
+    $columnPrefix: '.col';
+    $column: #{$columnPrefix}-#{$screen};
+    // $column: if($screen == all, $columnPrefix, #{$columnPrefix}-#{$screen});
+    %columnBase {
       flex-grow: 1;
       flex-basis: 0;
       max-width: 100%;
+    }
+
+    #{$column} {
+      @extend %columnBase;
     }
 
     @for $i from 1 through $grid-columns {
