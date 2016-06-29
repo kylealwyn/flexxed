@@ -20,18 +20,23 @@ html
     mixin section(title, description, multipleCodeBlocks)
       a(name=title)
       section.page-section(id=title)
+        .section-header
+          .container
+            h2.section-title= title
+            p.section-description= description
         .container
-          h2= title
-          p= description
           if multipleCodeBlocks
             block
           else
             +code
               block
 
+    .menu-toggle
+    .menu
+      ul.menu-list
+
     .page
       .wrap
-        a(name="hero")
         section#page-hero.page-section
           .container
             h1 Get Flexxed
@@ -39,30 +44,24 @@ html
             .hero-buttons
               a.button(href="https://github.com/alwynsays/flexxed") Download
 
-        a(name="installing")
-        section.page-section
-          .container
-            h2 Installation
-            .row
-              .col.col-sm-6
-                h3 Bower
-                code bower install --save flexxed
-              .col.col-sm-6
-                h3 NPM
-                code npm install --save flexxed
+        +section('installation', 'Find flexxed on your favorite package manager.', true)
+          .row
+            .col.col-sm-6
+              h3 Bower
+              code bower install --save flexxed
+            .col.col-sm-6
+              h3 NPM
+              code npm install --save flexxed
 
-        a(name='syntax')
-        section.page-section
-          .container
-            h2 Syntactically Simple
-            p Row. Column. Content. That's it.
-            pre
-              code.section-code.html
-                .row
-                  .col-xs
-                    h3 Look at me!
 
-        +section('responsivity', 'Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.')
+        +section('syntax', 'Row. Column. Content. That\'s it.', true)
+          pre
+            code.section-code.html
+              .row
+                .col-xs
+                  h3 Look at me!
+
+        +section('responsive', 'Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.')
           .row
             .col-xs-12.col-sm-3.col-md-2.col-lg-1
               .box-row
@@ -81,7 +80,7 @@ html
             .col-2.col-sm-6.col-md-4.col-lg-2
               .box-row
 
-        +section('fluidity', 'Percent based widths enable smooth and dynamic resizing.')
+        +section('fluid', 'Percent based widths enable smooth and dynamic resizing.')
           .row
             .col-xs
               .box-row
@@ -116,7 +115,7 @@ html
             .col-xs-6
               .box-row
 
-        +section('offsetting', 'Push columns')
+        +section('offsets', 'Push columns')
           .row
             .col-xs-1.col-xs-offset-11
               .box-row
@@ -165,7 +164,7 @@ html
             .col-xs
               .box-row
 
-        +section('nestable', 'Nest all the grids you want.')
+        +section('nesting', 'Nest all the grids you want.')
           .row
             .col-xs-7
               .box.box-container

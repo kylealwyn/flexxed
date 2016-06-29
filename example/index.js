@@ -46,7 +46,39 @@ function formatCodeBlocks() {
   });
 }
 
+function toggleMenu() {
+
+}
+
+function createMenu() {
+  var menuList = document.querySelector('.menu-list'),
+      menuItems = document.querySelectorAll('a[name]'),
+      menuToggle = document.querySelector('.menu-toggle');
+
+  menuToggle.addEventListener('click', function () {
+    var menu = document.querySelector('.menu');
+    if (menu.classList.contains('menu-open')) {
+      menu.classList.remove('menu-open');
+      this.classList.remove('menu-toggle-open');
+    } else {
+      menu.classList.add('menu-open');
+      this.classList.add('menu-toggle-open');
+    }
+  });
+
+  [].forEach.call(menuItems, function (menuItem) {
+    var menuText = menuItem.name.charAt(0).toUpperCase() + menuItem.name.slice(1);
+    var anchor = document.createElement('a');
+    anchor.href = '#' + menuText.toLowerCase();
+    var listItemEl = document.createElement('li');
+    listItemEl.classList.add('menu-list-item');
+    listItemEl.innerHTML = '<a class="menu-list-link" href="#' + menuText.toLowerCase() + '""><a>' + menuText;
+    menuList.appendChild(listItemEl)
+  });
+}
+
 (function init() {
+  createMenu();
   escapeCodeBlocks();
   formatCodeBlocks();
   hljs.initHighlightingOnLoad();

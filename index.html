@@ -6,44 +6,61 @@
     <link rel="stylesheet" type="text/css" href="dist/flexed.css">
   </head>
   <body>
+    <div class="menu-toggle"></div>
+    <div class="menu">
+      <ul class="menu-list"></ul>
+    </div>
     <div class="page">
-      <div class="wrap"><a name="hero"></a>
+      <div class="wrap">
         <section class="page-section" id="page-hero">
           <div class="container">
             <h1>Get Flexxed</h1>
             <p class="hero-description">The last grid you'll ever need.</p>
             <div class="hero-buttons"><a class="button" href="https://github.com/alwynsays/flexxed">Download</a></div>
           </div>
-        </section><a name="installing"></a>
-        <section class="page-section">
-          <div class="container">
-            <h2>Installation</h2>
-            <div class="row">
-              <div class="col col-sm-6">
-                <h3>Bower</h3><code>bower install --save flexxed</code>
+        </section><a name="installation"></a>
+            <section class="page-section" id="installation">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">installation</h2>
+                  <p class="section-description">Find flexxed on your favorite package manager.</p>
+                </div>
               </div>
-              <div class="col col-sm-6">
-                <h3>NPM</h3><code>npm install --save flexxed</code>
-              </div>
-            </div>
-          </div>
-        </section><a name="syntax"></a>
-        <section class="page-section">
-          <div class="container">
-            <h2>Syntactically Simple</h2>
-            <p>Row. Column. Content. That's it.</p>
-            <pre><code class="section-code html">
-                <div class="row">
-                  <div class="col-xs">
-                    <h3>Look at me!</h3>
-                  </div>
-                </div></code></pre>
-          </div>
-        </section><a name="responsivity"></a>
-            <section class="page-section" id="responsivity">
               <div class="container">
-                <h2>responsivity</h2>
-                <p>Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.</p>
+                <div class="row">
+                  <div class="col col-sm-6">
+                    <h3>Bower</h3><code>bower install --save flexxed</code>
+                  </div>
+                  <div class="col col-sm-6">
+                    <h3>NPM</h3><code>npm install --save flexxed</code>
+                  </div>
+                </div>
+              </div>
+            </section><a name="syntax"></a>
+            <section class="page-section" id="syntax">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">syntax</h2>
+                  <p class="section-description">Row. Column. Content. That's it.</p>
+                </div>
+              </div>
+              <div class="container">
+                <pre><code class="section-code html">
+                    <div class="row">
+                      <div class="col-xs">
+                        <h3>Look at me!</h3>
+                      </div>
+                    </div></code></pre>
+              </div>
+            </section><a name="responsive"></a>
+            <section class="page-section" id="responsive">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">responsive</h2>
+                  <p class="section-description">Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.</p>
+                </div>
+              </div>
+              <div class="container">
                     <div class="section-code-example">
                       <div class="row">
                         <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
@@ -102,11 +119,15 @@
                           </div></code></pre>
                     </div>
               </div>
-            </section><a name="fluidity"></a>
-            <section class="page-section" id="fluidity">
+            </section><a name="fluid"></a>
+            <section class="page-section" id="fluid">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">fluid</h2>
+                  <p class="section-description">Percent based widths enable smooth and dynamic resizing.</p>
+                </div>
+              </div>
               <div class="container">
-                <h2>fluidity</h2>
-                <p>Percent based widths enable smooth and dynamic resizing.</p>
                     <div class="section-code-example">
                       <div class="row">
                         <div class="col-xs">
@@ -217,11 +238,15 @@
                           </div></code></pre>
                     </div>
               </div>
-            </section><a name="offsetting"></a>
-            <section class="page-section" id="offsetting">
+            </section><a name="offsets"></a>
+            <section class="page-section" id="offsets">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">offsets</h2>
+                  <p class="section-description">Push columns</p>
+                </div>
+              </div>
               <div class="container">
-                <h2>offsetting</h2>
-                <p>Push columns</p>
                     <div class="section-code-example">
                       <div class="row">
                         <div class="col-xs-1 col-xs-offset-11">
@@ -338,9 +363,13 @@
               </div>
             </section><a name="automatic"></a>
             <section class="page-section" id="automatic">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">automatic</h2>
+                  <p class="section-description">Add any number of generic columns to a row and let the grid do the math for you.</p>
+                </div>
+              </div>
               <div class="container">
-                <h2>automatic</h2>
-                <p>Add any number of generic columns to a row and let the grid do the math for you.</p>
                     <div class="section-code-example">
                       <div class="row">
                         <div class="col-xs">
@@ -383,11 +412,15 @@
                           </div></code></pre>
                     </div>
               </div>
-            </section><a name="nestable"></a>
-            <section class="page-section" id="nestable">
+            </section><a name="nesting"></a>
+            <section class="page-section" id="nesting">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">nesting</h2>
+                  <p class="section-description">Nest all the grids you want.</p>
+                </div>
+              </div>
               <div class="container">
-                <h2>nestable</h2>
-                <p>Nest all the grids you want.</p>
                     <div class="section-code-example">
                       <div class="row">
                         <div class="col-xs-7">
@@ -488,9 +521,13 @@
               </div>
             </section><a name="alignment"></a>
             <section class="page-section" id="alignment">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">alignment</h2>
+                  <p class="section-description">Vertical and horizontal alignment has never been easier.</p>
+                </div>
+              </div>
               <div class="container">
-                <h2>alignment</h2>
-                <p>Vertical and horizontal alignment has never been easier.</p>
                     <div class="section-code-example">
                       <h3>.justify-start-*</h3>
                       <div class="row">
@@ -658,9 +695,13 @@
               </div>
             </section><a name="distribution"></a>
             <section class="page-section" id="distribution">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">distribution</h2>
+                  <p class="section-description">Easily give your elements some room to breathe.</p>
+                </div>
+              </div>
               <div class="container">
-                <h2>distribution</h2>
-                <p>Easily give your elements some room to breathe.</p>
                     <div class="section-code-example">
                       <h3>.space-around-*</h3>
                       <div class="box box-container">
@@ -750,9 +791,13 @@
               </div>
             </section><a name="reordering"></a>
             <section class="page-section" id="reordering">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">reordering</h2>
+                  <p class="section-description">Mix 'em up.</p>
+                </div>
+              </div>
               <div class="container">
-                <h2>reordering</h2>
-                <p>Mix 'em up.</p>
                     <div class="section-code-example">
                       <h3>.first-*</h3>
                       <div class="row">
@@ -925,9 +970,13 @@
               </div>
             </section><a name="stacking"></a>
             <section class="page-section" id="stacking">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">stacking</h2>
+                  <p class="section-description">By default, rows layout columns horizontally. However, many layouts call for a mix of the two.</p>
+                </div>
+              </div>
               <div class="container">
-                <h2>stacking</h2>
-                <p>By default, rows layout columns horizontally. However, many layouts call for a mix of the two.</p>
                     <div class="section-code-example">
                       <h3>.vertical-*</h3>
                       <div class="box box-container">
@@ -975,9 +1024,13 @@
               </div>
             </section><a name="spacing"></a>
             <section class="page-section" id="spacing">
+              <div class="section-header">
+                <div class="container">
+                  <h2 class="section-title">spacing</h2>
+                  <p class="section-description">Give 'em some room to breathe.</p>
+                </div>
+              </div>
               <div class="container">
-                <h2>spacing</h2>
-                <p>Give 'em some room to breathe.</p>
                 <h3>Margins</h3>
                     <div class="section-code-example">
                       <h3>.m-&lt;screen&gt;-&lt;size&gt;</h3>

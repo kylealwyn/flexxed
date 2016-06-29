@@ -3,8 +3,31 @@
 @import 'github-gist';
 
 $primary: #795DA3;
+$secondary: #3E4D4D;
 $dark: #224142;
-$bg: #F4F3F2;
+$bg: white;
+$lt-gray: #F4F3F2;
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -32,10 +55,6 @@ h2 {
   outline-style: none
 }
 
-h2 + p {
-  margin: 0 0 2rem
-}
-
 a {
   text-decoration: none;
   color: $primary;
@@ -47,6 +66,74 @@ a:hover {
   color: $primary
 }
 
+.container {
+  padding: 0 1rem;
+}
+
+.menu-toggle {
+  border-radius: 4px;
+  box-shadow: 0 8px 15px rgba($dark, 0.17);
+  cursor: pointer;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 10;
+  transition: 125ms;
+  background: $dark;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+
+  &:before {
+    content: 'Menu'
+  }
+  &.menu-toggle-open {
+
+  &:before {
+    content: 'Close'
+  }
+  }
+}
+
+.menu {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 8px 15px rgba($dark, 0.17);
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 200px;
+  padding: 1rem 1rem;
+  // transform: translateX(200px);
+  opacity: 0;
+  transform: scale(0.5);
+  transform-origin: 100% 0%;
+  transition: 250ms;
+  visibility: hidden;
+
+  &.menu-open {
+    // transform: translateX(0);
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+
+  .menu-list-item {
+    padding: 0.25rem;
+    position: relative;
+    &:hover {
+      background: $lt-gray;
+    }
+  }
+
+  .menu-list-link {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+}
+
 pre {
   overflow-x: auto;
   margin: 1.6em 0;
@@ -55,12 +142,16 @@ pre {
   word-wrap: normal;
   max-height: 400px;
   overflow: auto;
-  box-shadow: 0 8px 15px rgba($dark, 0.24);
+  background: $lt-gray;
+  box-shadow: 0 8px 15px rgba($dark, 0.17);
+
+  @include scrollbars(0.5rem, $primary);
+
+  .hljs {
+    border: 1px solid $lt-gray;
+  }
 }
 
-code {
-  // color: $primary;
-}
 
 .layout {
   display: flex;
@@ -85,85 +176,42 @@ code {
   box-sizing: border-box;
 }
 
+#page-hero {
+  text-align: center;
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: lighter;
+  }
+}
+
 .page-section {
-padding: 3rem 1rem;
+  margin-top: 4rem;
+  // &:nth-of-type(odd) {
+  //   background: white;
+  // }
+  .section-header {
+    background: $primary;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+  }
 
-&:nth-of-type(odd) {
-    background: white;
-}
-
-h2 {
+  .section-title {
+    color: white;
+    letter-spacing: 0.15rem;
     text-transform: capitalize;
-}
-}
+    margin-top: 0;
+  }
 
-.page-features {
-    width: 100%;
-    background: $dark;
-    overflow: scroll
-}
-
-.menu-button {
-    position: fixed;
-    top: .75rem;
-    right: .75rem;
-    z-index: 1;
-    box-sizing: border-box;
-    padding: .45rem;
-    height: 3rem;
-    width: 3rem;
-    background: white;
-    border: 1px solid transparent;
-    user-select: none
-}
-
-.menu-button:hover {
-    border: 1px solid $primary;
-    border-radius: 2px
-}
-
-.menu-button:active {
-    background: $bg;
-    border: 1px solid transparent
-}
-
-.open {
-    transform: translate3d(-15rem,0,0)
-}
-
-.menu-button-icon {
-    width: 2rem;
-    height: 2rem
-}
-
-.hero-copy {
-    font-size: 1rem;
+  .section-description {
+    color: white;
     margin-bottom: 0;
-    padding: 0 2rem;
-    text-align: center;
-}
-
-.slide-menu {
-    display: block;
-    position: fixed;
-    overflow: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 250px;
-}
-
-.menu {
-    box-sizing: border-box;
-    padding-bottom: 5rem;
-    background: $dark;
-}
-
-.menu-header {
-    box-sizing: border-box;
-    padding: 3rem 3rem 0;
-    color: $bg;
+  }
 }
 
 .menu-list {
@@ -172,41 +220,14 @@ h2 {
   list-style: none;
 }
 
-.menu-list-item {
-  height: 3rem;
-  line-height: 3rem;
-  font-size: 1rem;
-  color: $primary;
-  background: 0 0;
-  transition: all .2s ease-in;
-}
-
-.menu-link {
-  box-sizing: border-box;
-  padding-left: 3rem;
-  display: block;
-  color: $primary;
-  transition: color .2s ease-in;
-}
-
-.menu-link:hover {
-  color: lighten($primary, 5%);
-  border-bottom: 0;
-}
-
-.link-top {
-  align-self: flex-end;
-}
-
 .button {
-  background: lighten($primary, 10%);
+  border: 1px solid $primary;
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   min-width: 11rem;
   padding: 0 4rem;
-  border-radius: 26px;
-  color: white;
+  border-radius: 4px;
   padding: 8px 4px;
   text-align: center;
   transition: background-color,.15s
@@ -229,7 +250,7 @@ h2 {
   box-sizing: border-box;
   min-height: 1rem;
   margin-bottom: 0;
-  background: $primary;
+  background: $secondary;
   border-radius: 2px;
   overflow: hidden;
   text-align: center;
@@ -241,11 +262,11 @@ h2 {
 }
 
 .box-first {
-  background: darken($primary, 10%);
+  background: darken($secondary, 10%);
 }
 
 .box-nested {
-  background: darken($primary, 20%);
+  background: darken($secondary, 20%);
 }
 
 .box-large {
@@ -264,15 +285,6 @@ h2 {
 .page-footer {
   box-sizing: border-box;
   padding-bottom: 3rem;
-}
-
-.tag {
-  color: black;
-  font-weight: 400;
-}
-
-.end {
-  text-align: end;
 }
 
 .invisible-xs {
@@ -302,22 +314,7 @@ h2 {
   padding: 0.5em;
 }
 
-#page-hero {
-  background: $primary;
-  text-align: center;
 
-  h1 {
-    color: white;
-    font-size: 48px;
-    margin-bottom: 4px;
-  }
-
-  p {
-    font-size: 16px;
-    color: white;
-    font-weight: lighter;
-  }
-}
 
 @media only screen and (min-width: 48rem) {
   body {
