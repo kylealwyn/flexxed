@@ -14,7 +14,7 @@ const paths = {
   dist: join(__dirname, 'dist')
 };
 
-const libName = 'flexed';
+const libName = 'flexxed';
 
 gulp.task('exampleMarkups', () => {
   return gulp.src(join(paths.example, 'index.pug'))

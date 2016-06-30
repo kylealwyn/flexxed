@@ -1,7 +1,8 @@
 {
   "name": "flexxed",
+  "version": "0.1.0",
   "description": "The last grid you'll ever need.",
-  "main": "dist/flexboxgrid.css",
+  "main": "dist/flexxed.css",
   "authors": [
     "@alwynsays"
   ],
