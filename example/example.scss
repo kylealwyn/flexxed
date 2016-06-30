@@ -75,8 +75,8 @@ a:hover {
   box-shadow: 0 8px 15px rgba($dark, 0.17);
   cursor: pointer;
   position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1rem;
+  right: 1rem;
   z-index: 10;
   transition: 125ms;
   background: $dark;
@@ -90,10 +90,12 @@ a:hover {
     content: 'Menu'
   }
   &.menu-toggle-open {
-
-  &:before {
-    content: 'Close'
-  }
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+    &:before {
+      content: 'Close'
+    }
   }
 }
 
@@ -124,7 +126,7 @@ a:hover {
     padding: 0.25rem;
     position: relative;
     &:hover {
-      background: $lt-gray;
+      color: lighten($primary, 10%);
     }
   }
 
