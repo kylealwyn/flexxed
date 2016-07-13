@@ -310,7 +310,7 @@
   margin-right: calc(1rem / 2 * -1);
   margin-left: calc(1rem / 2 * -1); }
 
-[class*=col] {
+[class^='col-'] {
   box-sizing: border-box;
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
@@ -396,16 +396,13 @@
     max-width: 100%; }
   .justify-start-xs {
     -ms-flex-pack: start;
-        justify-content: flex-start;
-    text-align: start; }
+        justify-content: flex-start; }
   .justify-center-xs {
     -ms-flex-pack: center;
-        justify-content: center;
-    text-align: center; }
+        justify-content: center; }
   .justify-end-xs {
     -ms-flex-pack: end;
-        justify-content: flex-end;
-    text-align: end; }
+        justify-content: flex-end; }
   .align-top-xs {
     -ms-flex-align: start;
         -ms-grid-row-align: flex-start;
@@ -522,16 +519,13 @@
     max-width: 100%; }
   .justify-start-sm {
     -ms-flex-pack: start;
-        justify-content: flex-start;
-    text-align: start; }
+        justify-content: flex-start; }
   .justify-center-sm {
     -ms-flex-pack: center;
-        justify-content: center;
-    text-align: center; }
+        justify-content: center; }
   .justify-end-sm {
     -ms-flex-pack: end;
-        justify-content: flex-end;
-    text-align: end; }
+        justify-content: flex-end; }
   .align-top-sm {
     -ms-flex-align: start;
         -ms-grid-row-align: flex-start;
@@ -648,16 +642,13 @@
     max-width: 100%; }
   .justify-start-md {
     -ms-flex-pack: start;
-        justify-content: flex-start;
-    text-align: start; }
+        justify-content: flex-start; }
   .justify-center-md {
     -ms-flex-pack: center;
-        justify-content: center;
-    text-align: center; }
+        justify-content: center; }
   .justify-end-md {
     -ms-flex-pack: end;
-        justify-content: flex-end;
-    text-align: end; }
+        justify-content: flex-end; }
   .align-top-md {
     -ms-flex-align: start;
         -ms-grid-row-align: flex-start;
@@ -774,16 +765,13 @@
     max-width: 100%; }
   .justify-start-lg {
     -ms-flex-pack: start;
-        justify-content: flex-start;
-    text-align: start; }
+        justify-content: flex-start; }
   .justify-center-lg {
     -ms-flex-pack: center;
-        justify-content: center;
-    text-align: center; }
+        justify-content: center; }
   .justify-end-lg {
     -ms-flex-pack: end;
-        justify-content: flex-end;
-    text-align: end; }
+        justify-content: flex-end; }
   .align-top-lg {
     -ms-flex-align: start;
         -ms-grid-row-align: flex-start;
@@ -900,16 +888,13 @@
     max-width: 100%; }
   .justify-start-xl {
     -ms-flex-pack: start;
-        justify-content: flex-start;
-    text-align: start; }
+        justify-content: flex-start; }
   .justify-center-xl {
     -ms-flex-pack: center;
-        justify-content: center;
-    text-align: center; }
+        justify-content: center; }
   .justify-end-xl {
     -ms-flex-pack: end;
-        justify-content: flex-end;
-    text-align: end; }
+        justify-content: flex-end; }
   .align-top-xl {
     -ms-flex-align: start;
         -ms-grid-row-align: flex-start;
