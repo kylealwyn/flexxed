@@ -9,7 +9,7 @@ const join = require('path').join;
 
 
 const paths = {
-  src: join(__dirname, 'src'),
+  src: join(__dirname, 'source'),
   example: join(__dirname, 'example'),
   dist: join(__dirname, 'dist')
 };
