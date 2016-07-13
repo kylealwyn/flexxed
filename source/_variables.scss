@@ -19,16 +19,13 @@ $screens: (
 
 $alignments: (
   justify-start: (
-    justify-content: flex-start,
-    text-align: start
+    justify-content: flex-start
   ),
   justify-center: (
-    justify-content: center,
-    text-align: center
+    justify-content: center
   ),
   justify-end: (
-    justify-content: flex-end,
-    text-align: end
+    justify-content: flex-end
   ),
   align-top: (
     align-items: flex-start
