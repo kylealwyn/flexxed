@@ -88,5 +88,13 @@
     .reverse-#{$screen} {
       flex-direction: row-reverse;
     }
+
+    .collapsed-#{screen} {
+      margin: 0;
+
+      [class^='col-'] {
+        padding: 0;
+      }
+    }
   }
 }
