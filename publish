@@ -19,7 +19,9 @@ var commands = ['gulp dist',
 'npm publish']
 
 function run(cmd, cb) {
-  exec(commands.shift(), run)
+  if (commands.length) {
+    exec(commands.shift(), run)
+  }
 }
 
 run()
