@@ -9,15 +9,17 @@ if (!version) {
   version = 'v' + version
 }
 
-var commands = ['gulp dist',
-'git add -A',
-'git commit -m ' + version,
-'git tag ' + version,
-'git push',
-'git push --tags',
-'bower version ' + version,
-'npm version ' + version,
-'npm publish']
+var commands = [
+  'gulp dist',
+  'git add -A',
+  'git commit -m ' + version,
+  'git tag ' + version,
+  'git push',
+  'git push --tags',
+  'bower version ' + version,
+  'npm version ' + version,
+  'npm publish'
+]
 
 const run = (commands) => {
   if (commands && commands.length) {
