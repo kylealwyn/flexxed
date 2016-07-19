@@ -18,10 +18,22 @@ var commands = ['gulp dist',
 'npm version ' + version,
 'npm publish']
 
-function run(cmd, cb) {
-  if (commands.length) {
-    exec(commands.shift(), run)
+const run = (commands) => {
+  if (commands && commands.length) {
+    const stream = exec(commands.shift(), run)
+
+    stream.stdout.on('data', (data) => {
+      console.log(data);
+    });
+
+    stream.stderr.on('data', (data) => {
+      console.log(data);
+    });
+
+    stream.on('exit', (code) => {
+      run(commands);
+    });
   }
 }
 
-run()
+run(commands)
