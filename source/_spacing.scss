@@ -16,20 +16,20 @@ $sides: (
 
 @each $size, $px in $spacings {
   .m-#{$size} {
-    margin: #{$px} !important;
+    margin: #{$px};
   }
 
   .p-#{$size} {
-    padding: #{$px} !important;
+    padding: #{$px};
   }
-  
+
   @each $side, $name in $sides {
     .m-#{$name}-#{$size} {
-      margin-#{$side}: #{$px} !important;
+      margin-#{$side}: #{$px};
     }
 
     .p-#{$name}-#{$size} {
-      padding-#{$side}: #{$px} !important;
+      padding-#{$side}: #{$px};
     }
   }
 }
