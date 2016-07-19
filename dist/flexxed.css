@@ -331,9 +331,9 @@
   .reverse-xs {
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
-  .collapsed-screen {
+  .collapsed-xs {
     margin: 0; }
-    .collapsed-screen [class^='col-'] {
+    .collapsed-xs [class^='col-'] {
       padding: 0; } }
 
 @media (min-width: 48em) {
@@ -458,9 +458,9 @@
   .reverse-sm {
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
-  .collapsed-screen {
+  .collapsed-sm {
     margin: 0; }
-    .collapsed-screen [class^='col-'] {
+    .collapsed-sm [class^='col-'] {
       padding: 0; } }
 
 @media (min-width: 64em) {
@@ -585,9 +585,9 @@
   .reverse-md {
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
-  .collapsed-screen {
+  .collapsed-md {
     margin: 0; }
-    .collapsed-screen [class^='col-'] {
+    .collapsed-md [class^='col-'] {
       padding: 0; } }
 
 @media (min-width: 75em) {
@@ -712,9 +712,9 @@
   .reverse-lg {
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
-  .collapsed-screen {
+  .collapsed-lg {
     margin: 0; }
-    .collapsed-screen [class^='col-'] {
+    .collapsed-lg [class^='col-'] {
       padding: 0; } }
 
 @media (min-width: 84em) {
@@ -839,7 +839,7 @@
   .reverse-xl {
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
-  .collapsed-screen {
+  .collapsed-xl {
     margin: 0; }
-    .collapsed-screen [class^='col-'] {
+    .collapsed-xl [class^='col-'] {
       padding: 0; } }
