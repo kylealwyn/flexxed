@@ -15,15 +15,15 @@ $sides: (
 );
 
 @each $size, $px in $spacings {
+  .m-#{$size} {
+    margin: #{$px} !important;
+  }
+
+  .p-#{$size} {
+    padding: #{$px} !important;
+  }
+  
   @each $side, $name in $sides {
-    .m-#{$size} {
-      margin: #{$px} !important;
-    }
-
-    .p-#{$size} {
-      padding: #{$px} !important;
-    }
-
     .m-#{$name}-#{$size} {
       margin-#{$side}: #{$px} !important;
     }
