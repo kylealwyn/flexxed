@@ -15,7 +15,7 @@ var commands = ['gulp dist',
 'git tag ' + version,
 'git push',
 'git push --tags',
-'bower version',
+'bower version ' + version,
 'npm version ' + version,
 'npm publish']
 
