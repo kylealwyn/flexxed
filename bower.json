@@ -1,6 +1,6 @@
 {
   "name": "flexxed",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "The last grid you'll ever need.",
   "main": "dist/flexxed.css",
   "authors": [
