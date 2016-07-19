@@ -89,7 +89,7 @@
       flex-direction: row-reverse;
     }
 
-    .collapsed-#{screen} {
+    .collapsed-#{$screen} {
       margin: 0;
 
       [class^='col-'] {
