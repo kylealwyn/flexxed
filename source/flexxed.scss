@@ -28,7 +28,7 @@
 
 [class^='col-'] {
   box-sizing: border-box;
-  flex: 0 0 auto;
+  flex: 1 0 auto;
   padding-right: $half-gutter-width;
   padding-left: $half-gutter-width;
 }
@@ -38,16 +38,6 @@
 
     $columnPrefix: '.col';
     $column: #{$columnPrefix}-#{$screen};
-    // $column: if($screen == all, $columnPrefix, #{$columnPrefix}-#{$screen});
-    %columnBase {
-      flex-grow: 1;
-      flex-basis: 0;
-      max-width: 100%;
-    }
-
-    #{$column} {
-      @extend %columnBase;
-    }
 
     @for $i from 1 through $grid-columns {
       $col-width: percentage($i/$grid-columns);
