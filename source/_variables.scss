@@ -1,8 +1,8 @@
 $grid-columns: 12;
 $gutter-width: 1rem;
 $half-gutter-width: calc(#{$gutter-width} / 2);
-$gutter-compensation: calc(#{$gutter-width} / 2 * -1);
-$outer-margin: calc(#{$gutter-width} * 2);
+$gutter-compensation: calc(#{$gutter-width} / -2);
+$double-gutter-width: calc(#{$gutter-width} * 2);
 
 $screen-sm: 48em;
 $screen-md: 64em;
@@ -17,35 +17,4 @@ $screens: (
   xl: $screen-xl
 );
 
-$alignments: (
-  justify-start: (
-    justify-content: flex-start
-  ),
-  justify-center: (
-    justify-content: center
-  ),
-  justify-end: (
-    justify-content: flex-end
-  ),
-  align-top: (
-    align-items: flex-start
-  ),
-  align-center: (
-    align-items: center
-  ),
-  align-bottom: (
-    align-items: flex-end
-  ),
-  space-around: (
-    justify-content: space-around
-  ),
-  space-between: (
-    justify-content: space-between
-  ),
-  first: (
-    order: -1
-  ),
-  last: (
-    order: 1
-  )
-);
+$columnPrefix: 'col';
