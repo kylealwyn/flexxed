@@ -68,11 +68,13 @@ $alignments: (
   margin-left: $gutter-compensation;
 }
 
-[class^='#{$columnPrefix}-'] {
-  box-sizing: border-box;
-  flex: 1 0 auto;
-  padding-right: $half-gutter-width;
-  padding-left: $half-gutter-width;
+.row {
+  [class^='#{$columnPrefix}-'] {
+    box-sizing: border-box;
+    flex: 1 0 auto;
+    padding-right: $half-gutter-width;
+    padding-left: $half-gutter-width;
+  }
 }
 
 @each $screenTarget, $screenWidth in $screens {
