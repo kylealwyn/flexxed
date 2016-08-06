@@ -17,7 +17,7 @@ var commands = [
   'git push',
   'git push --tags',
   'bower version ' + version,
-  'npm version --no-git-version-tag' + version,
+  'npm version ' + version,
   'npm publish'
 ]
 
