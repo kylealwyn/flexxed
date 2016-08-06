@@ -27,9 +27,9 @@ var commands = [
   'npm publish'
 ]
 
-const run = (commands) => {
+const loop = (commands) => {
   if (commands && commands.length) {
-    const stream = exec(commands.shift(), run)
+    const stream = exec(commands.shift())
 
     stream.stdout.on('data', (data) => {
       console.log(data);
@@ -40,9 +40,9 @@ const run = (commands) => {
     });
 
     stream.on('exit', (code) => {
-      run(commands);
+      loop(commands);
     });
   }
 }
 
-run(commands)
+loop(commands)
