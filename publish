@@ -21,7 +21,9 @@ const loop = (commands) => {
   if (commands && commands.length) {
     const stream = exec(commands.shift())
     stream.stdout.on('data', (data) => console.log(data));
-    stream.stderr.on('data', (error) => throw new Error(data));
+    stream.stderr.on('data', (error) => {
+      throw new Error(data)
+    });
     stream.on('exit', () => loop(commands));
   }
 }
