@@ -181,8 +181,8 @@
 .container-fluid, .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: calc(1rem / 2 * -1);
-  padding-left: calc(1rem / 2 * -1); }
+  padding-right: 1rem;
+  padding-left: 1rem; }
 
 .container-fluid {
   width: 100%; }
