@@ -22,7 +22,7 @@ const loop = (commands) => {
     const stream = exec(commands.shift())
     stream.stdout.on('data', (data) => console.log(data));
     stream.stderr.on('data', (error) => {
-      throw new Error(error)
+      console.error(error);
     });
     stream.on('exit', () => loop(commands));
   }
