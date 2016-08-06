@@ -27,7 +27,7 @@ const loop = (commands) => {
 }
 
 loop([
-  'gulp dist',
+  'gulp build',
   'git add -A',
   'git commit -m ' + version,
   'git tag ' + version,

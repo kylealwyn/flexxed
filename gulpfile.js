@@ -46,16 +46,16 @@ gulp.task('sass', () => {
     .pipe(gulp.dest(paths.dist));
 });
 
-gulp.task('dist', ['sass'], () => {
+gulp.task('build', ['sass'], () => {
   return gulp.src(join(paths.dist,  `${libName}.css`))
-    // .pipe(sourcemaps.init())
-    .pipe(cleanCSS())
-    // .pipe(sourcemaps.write())
+    .pipe(sourcemaps.init())
+      .pipe(cleanCSS())
+    .pipe(sourcemaps.write())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(paths.dist))
 });
 
-gulp.task('default', ['dist']);
+gulp.task('default', ['build']);
 gulp.task('serve', ['sass', 'example'], () => {
   gulp.watch(join(paths.src, '**/*.scss'), ['sass']);
   gulp.watch(join(paths.example, '**/*.scss'), ['exampleSass']);
