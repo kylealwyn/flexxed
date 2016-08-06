@@ -1,0 +1,137 @@
+@mixin grid($screenTarget, $screenWidth) {
+  @if $screenTarget == xs {
+    @content;
+  }
+
+  @else {
+    @media (min-width: #{$screenWidth}) {
+      @content;
+    }
+  }
+}
+
+$alignments: (
+  justify-start: (
+    justify-content: flex-start
+  ),
+  justify-center: (
+    justify-content: center
+  ),
+  justify-end: (
+    justify-content: flex-end
+  ),
+  align-top: (
+    align-items: flex-start
+  ),
+  align-center: (
+    align-items: center
+  ),
+  align-bottom: (
+    align-items: flex-end
+  ),
+  space-around: (
+    justify-content: space-around
+  ),
+  space-between: (
+    justify-content: space-between
+  ),
+  first: (
+    order: -1
+  ),
+  last: (
+    order: 1
+  )
+);
+
+.container-fluid, .container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $gutter-width;
+  padding-left: $gutter-width;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  max-width: $screen-sm;
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation;
+}
+
+[class^='#{$columnPrefix}-'] {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+}
+
+@each $screenTarget, $screenWidth in $screens {
+  @include grid($screenTarget, $screenWidth) {
+    $columnName: #{$columnPrefix}-#{$screenTarget};
+
+    @for $i from 1 through $grid-columns {
+      $col-width: percentage($i/$grid-columns);
+
+      .#{$columnName}-#{$i} {
+        flex-basis: $col-width;
+        max-width: $col-width;
+      }
+
+      @if $i < $grid-columns {
+        .#{$columnName}-push-#{$i} {
+          left: $col-width;
+        }
+
+        .#{$columnName}-pull-#{$i} {
+          right: $col-width;
+        }
+
+        .#{$columnName}-offset-#{$i} {
+          margin-left: $col-width;
+        }
+      }
+    }
+
+    @each $alignment, $classes in $alignments {
+      .#{$alignment}-#{$screenTarget} {
+        @each $classKey, $classValue in $classes {
+          #{$classKey}: #{$classValue}
+        }
+      }
+    }
+
+    .flex-#{$screenTarget} {
+      display: flex;
+    }
+
+    .fill-#{$screenTarget} {
+      flex: 1;
+    }
+
+    .vertical-#{$screenTarget} {
+      flex-direction: column;
+    }
+
+    .reverse-#{$screenTarget} {
+      flex-direction: row-reverse;
+    }
+
+    .collapsed-#{$screenTarget} {
+      margin: 0;
+
+      [class^='col-'] {
+        padding: 0;
+      }
+    }
+  }
+}
