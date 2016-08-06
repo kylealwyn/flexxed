@@ -13,11 +13,11 @@ var commands = [
   'gulp dist',
   'git add -A',
   'git commit -m ' + version,
-  'git push',
   'bower version ' + version,
-  'npm version ' + version,
+  'git push',
   'git push --tags',
-  'npm publish',
+  'npm version ' + version,
+  'npm publish'
 ]
 
 const run = (commands) => {
