@@ -5,11 +5,12 @@
 .container-fluid, .container {
   margin-right: auto;
   margin-left: auto;
+  padding-right: $gutter-compensation;
+  padding-left: $gutter-compensation;
 }
 
 .container-fluid {
-  padding-right: $outer-margin;
-  padding-left: $outer-margin;
+  width: 100%;
 }
 
 .container {
