@@ -17,7 +17,16 @@ const exec = require('child_process').exec,
   write(`./${file}`, JSON.stringify(package, null, 2), 'utf-8');
 })
 
-var commands = [
+const loop = (commands) => {
+  if (commands && commands.length) {
+    const stream = exec(commands.shift())
+    stream.stdout.on('data', (data) => console.log(data));
+    stream.stderr.on('data', (data) => console.error(data));
+    stream.on('exit', () => loop(commands));
+  }
+}
+
+loop([
   'gulp dist',
   'git add -A',
   'git commit -m ' + version,
@@ -25,24 +34,4 @@ var commands = [
   'git push',
   'git push --tags',
   'npm publish'
-]
-
-const loop = (commands) => {
-  if (commands && commands.length) {
-    const stream = exec(commands.shift())
-
-    stream.stdout.on('data', (data) => {
-      console.log(data);
-    });
-
-    stream.stderr.on('data', (data) => {
-      console.log(data);
-    });
-
-    stream.on('exit', (code) => {
-      loop(commands);
-    });
-  }
-}
-
-loop(commands)
+])
