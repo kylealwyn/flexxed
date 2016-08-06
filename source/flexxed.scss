@@ -5,8 +5,8 @@
 .container-fluid, .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: $gutter-compensation;
-  padding-left: $gutter-compensation;
+  padding-right: $gutter-width;
+  padding-left: $gutter-width;
 }
 
 .container-fluid {
