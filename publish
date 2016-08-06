@@ -13,10 +13,10 @@ var commands = [
   'gulp dist',
   'git add -A',
   'git commit -m ' + version,
+  'npm version ' + version,
   'bower version ' + version,
   'git push',
   'git push --tags',
-  'npm version ' + version,
   'npm publish'
 ]
 
