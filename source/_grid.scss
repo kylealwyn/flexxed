@@ -68,13 +68,11 @@ $alignments: (
   margin-left: $gutter-compensation;
 }
 
-.row {
-  [class^='#{$columnPrefix}-'] {
-    box-sizing: border-box;
-    flex: 1 0 auto;
-    padding-right: $half-gutter-width;
-    padding-left: $half-gutter-width;
-  }
+[class^='#{$columnPrefix}-'] {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
 }
 
 @each $screenTarget, $screenWidth in $screens {
@@ -86,7 +84,7 @@ $alignments: (
 
       .#{$columnName}-#{$i} {
         flex-basis: $col-width;
-        width: $col-width;
+        max-width: $col-width;
       }
 
       @if $i < $grid-columns {
