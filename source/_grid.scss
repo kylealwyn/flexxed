@@ -86,7 +86,7 @@ $alignments: (
 
       .#{$columnName}-#{$i} {
         flex-basis: $col-width;
-        max-width: $col-width;
+        width: $col-width;
       }
 
       @if $i < $grid-columns {
