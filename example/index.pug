@@ -1,7 +1,13 @@
 doctype html
 html
   head
-    title
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, intial-scale=1")
+    meta(name="description" content="Flexxed is a CSS grid system based on the latest Flexbox standards. It's the last grid you'll ever need.")
+
+    title Flexxed. A CSS grid based on flexbox
+
     link(rel='stylesheet', type='text/css', href='example/example.css')
     link(rel='stylesheet', type='text/css', href='dist/flexxed.css')
     link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Prompt:400,800')
@@ -39,17 +45,17 @@ html
       .wrap
         section#page-hero.page-section
           .container
-            h1 Get Flexxed
-            p.hero-description The last grid you'll ever need.
+            h1 Flexxed
+            p.hero-description A CSS grid system based on the lastest Flexbox standards. It's the last grid you'll ever need.
             .hero-buttons
-              a.button(href="https://github.com/alwynsays/flexxed") Download
+              a.button(href="https://github.com/alwynsays/flexxed") View On Github
 
         +section('installation', 'Find flexxed on your favorite package manager.', true)
           .row
-            .col.col-sm-6
+            .col-xs-6
               h3 Bower
               code bower install --save flexxed
-            .col.col-sm-6
+            .col-xs-6
               h3 NPM
               code npm install --save flexxed
 
