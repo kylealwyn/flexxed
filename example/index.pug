@@ -384,5 +384,12 @@ html
                 span Rewritten by #[a(href="https://github.com/alwynsays") Kyle] #[a(href="https://alwynsays.com") Alwyn] &amp; inspired by #[a(href="https://github.com/kristoferjoseph/flexboxgrid") Flexbox Grid]
     script(src="example/highlight.pack.js")
     script(src="example/index.js")
-
-
+    script(async src='https://www.google-analytics.com/analytics.js')
+    script(type='text/javascript').
+      if (window.location.host === "alwynsays.com" ) {
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-66504866-1', 'auto');
+        ga('send', 'pageview');
+      }
+      
+    
