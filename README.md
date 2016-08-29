@@ -2,8 +2,8 @@
 
 The last CSS grid you'll ever need
 
-[![npm version](https://badge.fury.io/js/flexxed.svg)](https://badge.fury.io/js/flexxed)
-[![npm](https://img.shields.io/npm/alwynsays/flexxed.svg?maxAge=2592000)]()
+[![NPM](https://nodei.co/npm/<package>.png?compact=true)](https://npmjs.org/package/<package>)
+
 #### Install Via NPM
 `$ npm install flexxed --save`
 
