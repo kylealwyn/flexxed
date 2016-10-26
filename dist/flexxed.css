@@ -398,17 +398,14 @@
 
 .align-top-xs {
   -ms-flex-align: start;
-      -ms-grid-row-align: flex-start;
       align-items: flex-start; }
 
 .align-center-xs {
   -ms-flex-align: center;
-      -ms-grid-row-align: center;
       align-items: center; }
 
 .align-bottom-xs {
   -ms-flex-align: end;
-      -ms-grid-row-align: flex-end;
       align-items: flex-end; }
 
 .space-around-xs {
@@ -574,15 +571,12 @@
         justify-content: flex-end; }
   .align-top-sm {
     -ms-flex-align: start;
-        -ms-grid-row-align: flex-start;
         align-items: flex-start; }
   .align-center-sm {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center; }
   .align-bottom-sm {
     -ms-flex-align: end;
-        -ms-grid-row-align: flex-end;
         align-items: flex-end; }
   .space-around-sm {
     -ms-flex-pack: distribute;
@@ -739,15 +733,12 @@
         justify-content: flex-end; }
   .align-top-md {
     -ms-flex-align: start;
-        -ms-grid-row-align: flex-start;
         align-items: flex-start; }
   .align-center-md {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center; }
   .align-bottom-md {
     -ms-flex-align: end;
-        -ms-grid-row-align: flex-end;
         align-items: flex-end; }
   .space-around-md {
     -ms-flex-pack: distribute;
@@ -904,15 +895,12 @@
         justify-content: flex-end; }
   .align-top-lg {
     -ms-flex-align: start;
-        -ms-grid-row-align: flex-start;
         align-items: flex-start; }
   .align-center-lg {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center; }
   .align-bottom-lg {
     -ms-flex-align: end;
-        -ms-grid-row-align: flex-end;
         align-items: flex-end; }
   .space-around-lg {
     -ms-flex-pack: distribute;
@@ -1069,15 +1057,12 @@
         justify-content: flex-end; }
   .align-top-xl {
     -ms-flex-align: start;
-        -ms-grid-row-align: flex-start;
         align-items: flex-start; }
   .align-center-xl {
     -ms-flex-align: center;
-        -ms-grid-row-align: center;
         align-items: center; }
   .align-bottom-xl {
     -ms-flex-align: end;
-        -ms-grid-row-align: flex-end;
         align-items: flex-end; }
   .space-around-xl {
     -ms-flex-pack: distribute;

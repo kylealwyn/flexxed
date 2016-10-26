@@ -10,7 +10,6 @@ if (!version) {
   version = 'v' + version
 }
 
-
 const exec = require('child_process').exec,
       write = require('fs').writeFileSync;
 
