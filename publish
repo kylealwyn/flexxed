@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const version = process.argv[2];
-
+console.log(version[0]);
 if (!version) {
   throw new Error('Provide a new version (vX.X.X)')
 } else if (version[0] !== 'v') {
