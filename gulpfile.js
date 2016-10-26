@@ -19,13 +19,7 @@ const libName = 'flexxed';
 gulp.task('exampleMarkups', () => {
   return gulp.src(join(paths.example, 'index.pug'))
     .pipe(pug({
-      pretty: true,
-      locals: {
-        renderHTML: function (fn) {
-          console.log(fn);
-          console.log(fn());
-        }
-      }
+      pretty: true
     }))
     .pipe(gulp.dest('.'));
 })
