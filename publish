@@ -1,20 +1,18 @@
 #! /usr/bin/env node
 
 const version = process.argv[2];
-console.log(version[0]);
 if (!version) {
   throw new Error('Provide a new version (vX.X.X)')
 } else if (version[0] !== 'v') {
+  console.log('hello');
   version = 'v' + version
 }
 
-console.log(version);
 
 const exec = require('child_process').exec,
       write = require('fs').writeFileSync;
 
 ['bower.json', 'package.json'].forEach(file => {
-  console.log(version, version.substring(1));
   const package = require(`./${file}`)
   package.version = version.substring(1);
   write(`./${file}`, JSON.stringify(package, null, 2), 'utf-8');
