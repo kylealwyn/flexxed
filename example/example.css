@@ -193,6 +193,12 @@ table {
 .hljs-link {
   text-decoration: underline; }
 
+/*
+  Mixin to customize code scroll bars
+ */
+/*
+  Base Body styles
+ */
 body {
   box-sizing: border-box;
   padding: 0;
@@ -203,6 +209,9 @@ body {
   background: white;
   line-height: 1.4rem; }
 
+/*
+  Stylize all headers
+ */
 h1, h2, h3, h4, h5, h6 {
   font-family: Prompt,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   color: #224142; }
@@ -227,6 +236,9 @@ a:hover {
 .container {
   padding: 0 1rem; }
 
+/*
+  Floating Menu Component
+ */
 .menu-toggle {
   border-radius: 4px;
   box-shadow: 0 8px 15px rgba(34, 65, 66, 0.17);
@@ -234,7 +246,7 @@ a:hover {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  z-index: 10;
+  z-index: 1000;
   transition: 125ms;
   background: #224142;
   color: white;
@@ -245,6 +257,8 @@ a:hover {
   .menu-toggle:before {
     content: 'Menu'; }
   .menu-toggle.menu-toggle-open {
+    background: none;
+    color: black;
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: none; }
@@ -264,7 +278,8 @@ a:hover {
   transform: scale(0.5);
   transform-origin: 100% 0%;
   transition: 250ms;
-  visibility: hidden; }
+  visibility: hidden;
+  z-index: 999; }
   .menu.menu-open {
     opacity: 1;
     transform: scale(1);
@@ -281,9 +296,12 @@ a:hover {
     right: 0;
     bottom: 0; }
 
+/*
+  Code Block Styles
+ */
 pre {
   overflow-x: auto;
-  margin: 1.6em 0;
+  margin: 1.6em 0 1rem;
   font-size: .875em;
   white-space: pre;
   word-wrap: normal;
@@ -304,50 +322,36 @@ pre {
   pre .hljs {
     border: 1px solid #F4F3F2; }
 
-.layout {
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -ms-flex-direction: column;
-      flex-direction: column; }
-
-.page-nav {
-  box-sizing: border-box;
-  position: fixed;
-  padding: .5rem;
-  width: 100%;
-  background: 0 0; }
-
-.page {
-  z-index: 0;
-  background: white; }
-
-.wrap {
-  box-sizing: border-box; }
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 1rem; }
 
 #page-hero {
   text-align: center; }
   #page-hero h1 {
+    margin-bottom: 4px;
     font-size: 48px;
-    margin-bottom: 4px; }
+    color: #795DA3; }
   #page-hero p {
     font-size: 16px;
     font-weight: lighter; }
 
 .page-section {
-  margin-top: 4rem; }
+  padding: 2rem 0; }
   .page-section .section-header {
-    background: #795DA3;
-    padding: 3rem 0;
     margin-bottom: 2rem; }
   .page-section .section-title {
-    color: white;
+    color: #795DA3;
     letter-spacing: 0.15rem;
     text-transform: capitalize;
     margin-top: 0; }
   .page-section .section-description {
-    color: white;
+    color: #224142;
     margin-bottom: 0; }
+  .page-section + .page-section {
+    border-top: 1px solid #F4F3F2; }
 
 .menu-list {
   margin: 0;
@@ -419,8 +423,7 @@ pre {
   visibility: visible; }
 
 .section-code-example {
-  margin-top: 1rem;
-  margin-bottom: 3rem; }
+  margin: 1rem 0; }
   .section-code-example h3 {
     font-family: monospace; }
 
@@ -435,6 +438,8 @@ pre {
     font-size: 16px; }
   .slide-menu {
     width: 25%; }
+  .page-section {
+    padding: 4rem 0; }
   .open {
     transform: translate3d(0, 0, 0); }
   .hero-headline {

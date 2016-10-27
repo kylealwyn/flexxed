@@ -24,13 +24,12 @@ html
             block
 
     mixin section(title, description, multipleCodeBlocks)
-      a(name=title)
       section.page-section(id=title)
+        a(name=title)
         .section-header
-          .container
             h2.section-title= title
             p.section-description= description
-        .container
+        .section-example
           if multipleCodeBlocks
             block
           else
@@ -41,347 +40,355 @@ html
     .menu
       ul.menu-list
 
-    .page
-      .wrap
-        section#page-hero.page-section
-          .container
-            h1 Flexxed
-            p.hero-description A CSS grid system based on the lastest Flexbox standards. It's the last grid you'll ever need.
-            .hero-buttons
-              a.button(href="https://github.com/alwynsays/flexxed") View On Github
+    main
+      section#page-hero.page-section
+        .container
+          h1 Flexxed
+          p.hero-description A CSS grid system based on the lastest Flexbox standards. It's the last grid you'll ever need.
+          .hero-buttons
+            a(class="github-button"
+              href="https://github.com/kylealwyn/flexxed"
+              data-icon="octicon-star"
+              data-style="mega"
+              data-count-href="/kylealwyn/flexxed/stargazers"
+              data-count-api="/repos/kylealwyn/flexxed#stargazers_count"
+              data-count-aria-label="# stargazers on GitHub"
+              aria-label="Star kylealwyn/flexxed on GitHub"
+              ) Star
 
-        +section('installation', 'Find flexxed on your favorite package manager.', true)
-          .row
-            .col-xs-6
-              h3 Bower
-              code bower install --save flexxed
-            .col-xs-6
-              h3 NPM
-              code npm install --save flexxed
+      +section('installation', 'Find flexxed on your favorite package manager.', true)
+        .row
+          .col-xs-6
+            h3 Bower
+            code bower install --save flexxed
+          .col-xs-6
+            h3 NPM
+            code npm install --save flexxed
 
 
-        +section('syntax', 'Row. Column. Content. That\'s it.', true)
-          pre
-            code.section-code.html
+      +section('syntax', 'Row. Column. Content. That\'s it.', true)
+        pre
+          code.section-code.html
+            .row
+              .col-xs
+                h3 Look at me!
+
+      +section('responsive', 'Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.')
+        .row
+          .col-xs-12.col-sm-3.col-md-2.col-lg-1
+            .box-row
+          .col-xs-6.col-sm-6.col-md-8.col-lg-10
+            .box-row
+          .col-xs-6.col-sm-3.col-md-2.col-lg-1
+            .box-row
+        .row
+          .col-xs-12.col-sm-3.col-md-2.col-lg-1
+            .box-row
+          .col-xs-12.col-sm-9.col-md-10.col-lg-11
+            .box-row
+        .row
+          .col-xs-10.col-sm-6.col-md-8.col-lg-10
+            .box-row
+          .col-2.col-sm-6.col-md-4.col-lg-2
+            .box-row
+
+      +section('fluid', 'Percent based widths enable smooth and dynamic resizing.')
+        .row
+          .col-xs
+            .box-row
+        .row
+          .col-xs-1
+            .box-row
+          .col-xs-11
+            .box-row
+        .row
+          .col-xs-2
+            .box-row
+          .col-xs-10
+            .box-row
+        .row
+          .col-xs-3
+            .box-row
+          .col-xs-9
+            .box-row
+        .row
+          .col-xs-4
+            .box-row
+          .col-xs-8
+            .box-row
+        .row
+          .col-xs-5
+            .box-row
+          .col-xs-7
+            .box-row
+        .row
+          .col-xs-6
+            .box-row
+          .col-xs-6
+            .box-row
+
+      +section('offsets', 'Push columns')
+        .row
+          .col-xs-1.col-xs-offset-11
+            .box-row
+        .row
+          .col-xs-2.col-xs-offset-10
+            .box-row
+        .row
+          .col-xs-3.col-xs-offset-9
+            .box-row
+        .row
+          .col-xs-4.col-xs-offset-8
+            .box-row
+        .row
+          .col-xs-5.col-xs-offset-7
+            .box-row
+        .row
+          .col-xs-6.col-xs-offset-6
+            .box-row
+        .row
+          .col-xs-7.col-xs-offset-5
+            .box-row
+        .row
+          .col-xs-8.col-xs-offset-4
+            .box-row
+        .row
+          .col-xs-9.col-xs-offset-3
+            .box-row
+        .row
+          .col-xs-10.col-xs-offset-2
+            .box-row
+        .row
+          .col-xs-11.col-xs-offset-1
+            .box-row
+
+      +section('automatic', 'Add any number of generic columns to a row and let the grid do the math for you.')
+        .row
+          .col-xs
+            .box-row
+          .col-xs
+            .box-row
+        .row
+          .col-xs
+            .box-row
+          .col-xs
+            .box-row
+          .col-xs
+            .box-row
+
+      +section('nesting', 'Nest all the grids you want.')
+        .row
+          .col-xs-7
+            .box.box-container
               .row
-                .col-xs
-                  h3 Look at me!
+                .col-xs-9
+                  .box-first.box-container
+                    .row
+                      .col-xs-4
+                        .box-nested
+                      .col-xs-8
+                        .box-nested
+                .col-xs-3
+                  .box-first.box-container
+                    .row
+                      .col-xs
+                        .box-nested
+          .col-xs-5
+            .box.box-container
+              .row
+                .col-xs-12
+                  .box-first.box-container
+                    .row
+                      .col-xs-6
+                        .box-nested
+                      .col-xs-6
+                        .box-nested
 
-        +section('responsive', 'Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.')
-          .row
-            .col-xs-12.col-sm-3.col-md-2.col-lg-1
-              .box-row
-            .col-xs-6.col-sm-6.col-md-8.col-lg-10
-              .box-row
-            .col-xs-6.col-sm-3.col-md-2.col-lg-1
-              .box-row
-          .row
-            .col-xs-12.col-sm-3.col-md-2.col-lg-1
-              .box-row
-            .col-xs-12.col-sm-9.col-md-10.col-lg-11
-              .box-row
-          .row
-            .col-xs-10.col-sm-6.col-md-8.col-lg-10
-              .box-row
-            .col-2.col-sm-6.col-md-4.col-lg-2
-              .box-row
-
-        +section('fluid', 'Percent based widths enable smooth and dynamic resizing.')
+      +section('alignment', 'Vertical and horizontal alignment has never been easier.', true)
+        +code('.justify-start-*')
           .row
             .col-xs
-              .box-row
+              .box.box-container
+                .row.justify-start-xs
+                  .col-xs-6
+                    .box-nested
+
+        +code('.justify-center-xs-*')
           .row
-            .col-xs-1
-              .box-row
-            .col-xs-11
-              .box-row
+            .col-xs
+              .box.box-container
+                .row.justify-center-xs
+                  .col-xs-6
+                    .box-nested
+
+        +code('.justify-end-*')
           .row
-            .col-xs-2
-              .box-row
-            .col-xs-10
-              .box-row
+            .col-xs
+              .box.box-container
+                .row.justify-end-xs
+                  .col-xs-6
+                    .box-nested
+
+        p Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes.
+
+        +code
           .row
-            .col-xs-3
-              .box-row
-            .col-xs-9
-              .box-row
-          .row
-            .col-xs-4
-              .box-row
-            .col-xs-8
-              .box-row
-          .row
-            .col-xs-5
-              .box-row
-            .col-xs-7
-              .box-row
-          .row
+            .col-xs
+              .box.box-container
+                .row.justify-center-xs.justify-end-sm.justify-start-lg
+                  .col-xs-6
+                    .box-nested
+        +code('.align-top-*')
+          .row.align-top-xs
             .col-xs-6
-              .box-row
+              .box-large
             .col-xs-6
-              .box-row
+              .box
 
-        +section('offsets', 'Push columns')
-          .row
-            .col-xs-1.col-xs-offset-11
-              .box-row
-          .row
-            .col-xs-2.col-xs-offset-10
-              .box-row
-          .row
-            .col-xs-3.col-xs-offset-9
-              .box-row
-          .row
-            .col-xs-4.col-xs-offset-8
-              .box-row
-          .row
-            .col-xs-5.col-xs-offset-7
-              .box-row
-          .row
-            .col-xs-6.col-xs-offset-6
-              .box-row
-          .row
-            .col-xs-7.col-xs-offset-5
-              .box-row
-          .row
-            .col-xs-8.col-xs-offset-4
-              .box-row
-          .row
-            .col-xs-9.col-xs-offset-3
-              .box-row
-          .row
-            .col-xs-10.col-xs-offset-2
-              .box-row
-          .row
-            .col-xs-11.col-xs-offset-1
-              .box-row
+        +code('.align-center-*')
+          .row.align-center-xs
+            .col-xs-6
+              .box-large
+            .col-xs-6
+              .box
 
-        +section('automatic', 'Add any number of generic columns to a row and let the grid do the math for you.')
-          .row
-            .col-xs
-              .box-row
-            .col-xs
-              .box-row
-          .row
-            .col-xs
-              .box-row
-            .col-xs
-              .box-row
-            .col-xs
-              .box-row
+        +code('.align-bottom-*')
+          .row.align-bottom-xs
+            .col-xs-6
+              .box-large
+            .col-xs-6
+              .box
 
-        +section('nesting', 'Nest all the grids you want.')
+      +section('distribution', 'Easily give your elements some room to breathe.', true)
+        +code('.space-around-*')
+          .box.box-container
+            .row.space-around-xs
+              .col-xs-2
+                .box-nested
+              .col-xs-2
+                .box-nested
+              .col-xs-2
+                .box-nested
+
+        +code('.space-between-*')
+          .box.box-container
+            .row.space-between-xs
+              .col-xs-2
+                .box-nested
+              .col-xs-2
+                .box-nested
+              .col-xs-2
+                .box-nested
+
+        p You can also push elements to the opposite edge by using a filler #[code .col]
+        +code
+          .box.box-container
+            .row
+              .col-xs
+                .box-nested
+              .col-xs
+              .col-xs
+                .box-nested
+
+      +section('reordering', 'Mix \'em up.', true)
+        +code('.first-*')
           .row
-            .col-xs-7
+            .col-xs-12
               .box.box-container
                 .row
-                  .col-xs-9
-                    .box-first.box-container
-                      .row
-                        .col-xs-4
-                          .box-nested
-                        .col-xs-8
-                          .box-nested
-                  .col-xs-3
-                    .box-first.box-container
-                      .row
-                        .col-xs
-                          .box-nested
-            .col-xs-5
+                  .col-xs-2
+                    .box-first 1
+                  .col-xs-2
+                    .box-first 2
+                  .col-xs-2
+                    .box-first 3
+                  .col-xs-2
+                    .box-first 4
+                  .col-xs-2
+                    .box-first 5
+                  .col-xs-2.first-xs
+                    .box-nested 6
+
+        +code('.last-*')
+          .row
+            .col-xs-12
               .box.box-container
                 .row
-                  .col-xs-12
-                    .box-first.box-container
-                      .row
-                        .col-xs-6
-                          .box-nested
-                        .col-xs-6
-                          .box-nested
+                  .col-xs-2.last-xs
+                    .box-nested 1
+                  .col-xs-2
+                    .box-first 2
+                  .col-xs-2
+                    .box-first 3
+                  .col-xs-2
+                    .box-first 4
+                  .col-xs-2
+                    .box-first 5
+                  .col-xs-2
+                    .box-first 6
 
-        +section('alignment', 'Vertical and horizontal alignment has never been easier.', true)
-          +code('.justify-start-*')
+        p Or you can reverse all elements within the row.
+        +code('.row.reverse-*')
+          .row
+            .col-xs-12
+              .box.box-container
+                .row.reverse-xs
+                  .col-xs-2
+                    .box-nested 1
+                  .col-xs-2
+                    .box-nested 2
+                  .col-xs-2
+                    .box-nested 3
+                  .col-xs-2
+                    .box-nested 4
+                  .col-xs-2
+                    .box-nested 5
+                  .col-xs-2
+                    .box-nested 6
+
+      +section('stacking', 'By default, rows layout columns horizontally. However, many layouts call for a mix of the two.', true)
+        +code('.vertical-*')
+          .box.box-container
             .row
+              .col-xs.flex-xs
+                .box-nested.fill-xs
+              .col-xs.flex-xs
+                .box-nested.fill-xs
               .col-xs
-                .box.box-container
-                  .row.justify-start-xs
-                    .col-xs-6
-                      .box-nested
+                .row.vertical-xs
+                  .col-xs.m-b-sm
+                    .box-nested
+                  .col-xs
+                    .box-nested
 
-          +code('.justify-center-xs-*')
+
+      +section('spacing', 'Give \'em some room to breathe.', true)
+        h3 Margins
+        +code('.m-<screen>-<size>')
+          .box.box-container
             .row
-              .col-xs
-                .box.box-container
-                  .row.justify-center-xs
-                    .col-xs-6
-                      .box-nested
-
-          +code('.justify-end-*')
-            .row
-              .col-xs
-                .box.box-container
-                  .row.justify-end-xs
-                    .col-xs-6
-                      .box-nested
-
-          p Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes.
-
-          +code
-            .row
-              .col-xs
-                .box.box-container
-                  .row.justify-center-xs.justify-end-sm.justify-start-lg
-                    .col-xs-6
-                      .box-nested
-          +code('.align-top-*')
-            .row.align-top-xs
-              .col-xs-6
-                .box-large
-              .col-xs-6
-                .box
-
-          +code('.align-center-*')
-            .row.align-center-xs
-              .col-xs-6
-                .box-large
-              .col-xs-6
-                .box
-
-          +code('.align-bottom-*')
-            .row.align-bottom-xs
-              .col-xs-6
-                .box-large
-              .col-xs-6
-                .box
-
-        +section('distribution', 'Easily give your elements some room to breathe.', true)
-          +code('.space-around-*')
-            .box.box-container
-              .row.space-around-xs
-                .col-xs-2
-                  .box-nested
-                .col-xs-2
-                  .box-nested
-                .col-xs-2
-                  .box-nested
-
-          +code('.space-between-*')
-            .box.box-container
-              .row.space-between-xs
-                .col-xs-2
-                  .box-nested
-                .col-xs-2
-                  .box-nested
-                .col-xs-2
-                  .box-nested
-
-          p You can also push elements to the opposite edge by using a filler #[code .col]
-          +code
-            .box.box-container
-              .row
-                .col-xs
-                  .box-nested
-                .col-xs
-                .col-xs
-                  .box-nested
-
-        +section('reordering', 'Mix \'em up.', true)
-          +code('.first-*')
-            .row
+              .col-xs-12.m-b-sm
+                .box-nested .m-b-sm
               .col-xs-12
-                .box.box-container
-                  .row
-                    .col-xs-2
-                      .box-first 1
-                    .col-xs-2
-                      .box-first 2
-                    .col-xs-2
-                      .box-first 3
-                    .col-xs-2
-                      .box-first 4
-                    .col-xs-2
-                      .box-first 5
-                    .col-xs-2.first-xs
-                      .box-nested 6
+                .box-nested
 
-          +code('.last-*')
+        h3 Padding
+        +code('.p-<screen>-<size>')
+          .box.box-container
             .row
+              .col-xs-12.m-b-sm
+                .box-nested.p-xl .p-xl
               .col-xs-12
-                .box.box-container
-                  .row
-                    .col-xs-2.last-xs
-                      .box-nested 1
-                    .col-xs-2
-                      .box-first 2
-                    .col-xs-2
-                      .box-first 3
-                    .col-xs-2
-                      .box-first 4
-                    .col-xs-2
-                      .box-first 5
-                    .col-xs-2
-                      .box-first 6
-
-          p Or you can reverse all elements within the row.
-          +code('.row.reverse-*')
-            .row
-              .col-xs-12
-                .box.box-container
-                  .row.reverse-xs
-                    .col-xs-2
-                      .box-nested 1
-                    .col-xs-2
-                      .box-nested 2
-                    .col-xs-2
-                      .box-nested 3
-                    .col-xs-2
-                      .box-nested 4
-                    .col-xs-2
-                      .box-nested 5
-                    .col-xs-2
-                      .box-nested 6
-
-        +section('stacking', 'By default, rows layout columns horizontally. However, many layouts call for a mix of the two.', true)
-          +code('.vertical-*')
-            .box.box-container
-              .row
-                .col-xs.flex-xs
-                  .box-nested.fill-xs
-                .col-xs.flex-xs
-                  .box-nested.fill-xs
-                .col-xs
-                  .row.vertical-xs
-                    .col-xs.m-b-sm
-                      .box-nested
-                    .col-xs
-                      .box-nested
+                .box-nested.p-t-lg .p-t-sm
 
 
-        +section('spacing', 'Give \'em some room to breathe.', true)
-          h3 Margins
-          +code('.m-<screen>-<size>')
-            .box.box-container
-              .row
-                .col-xs-12.m-b-sm
-                  .box-nested .m-b-sm
-                .col-xs-12
-                  .box-nested
+      section.page-section
+        h2 The End
+        .row
+          .col
+            span Rewritten by #[a(href="https://github.com/alwynsays") Kyle] #[a(href="https://alwynsays.com") Alwyn] &amp; inspired by #[a(href="https://github.com/kristoferjoseph/flexboxgrid") Flexbox Grid]
 
-          h3 Padding
-          +code('.p-<screen>-<size>')
-            .box.box-container
-              .row
-                .col-xs-12.m-b-sm
-                  .box-nested.p-xl .p-xl
-                .col-xs-12
-                  .box-nested.p-t-lg .p-t-sm
-
-
-        section.page-section
-          .container
-            h2 The End
-            .row
-              .col
-                span Rewritten by #[a(href="https://github.com/alwynsays") Kyle] #[a(href="https://alwynsays.com") Alwyn] &amp; inspired by #[a(href="https://github.com/kristoferjoseph/flexboxgrid") Flexbox Grid]
+    script(async defer src="https://buttons.github.io/buttons.js")
     script(src="example/highlight.pack.js")
     script(src="example/index.js")
     script(async src='https://www.google-analytics.com/analytics.js')
@@ -391,5 +398,3 @@ html
         ga('create', 'UA-66504866-1', 'auto');
         ga('send', 'pageview');
       }
-      
-    

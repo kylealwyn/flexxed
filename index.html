@@ -15,1089 +15,1062 @@
     <div class="menu">
       <ul class="menu-list"></ul>
     </div>
-    <div class="page">
-      <div class="wrap">
-        <section class="page-section" id="page-hero">
-          <div class="container">
-            <h1>Flexxed</h1>
-            <p class="hero-description">A CSS grid system based on the lastest Flexbox standards. It's the last grid you'll ever need.</p>
-            <div class="hero-buttons"><a class="button" href="https://github.com/alwynsays/flexxed">View On Github</a></div>
-          </div>
-        </section><a name="installation"></a>
-            <section class="page-section" id="installation">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">installation</h2>
-                  <p class="section-description">Find flexxed on your favorite package manager.</p>
+    <main>
+      <section class="page-section" id="page-hero">
+        <div class="container">
+          <h1>Flexxed</h1>
+          <p class="hero-description">A CSS grid system based on the lastest Flexbox standards. It's the last grid you'll ever need.</p>
+          <div class="hero-buttons"><a class="github-button" href="https://github.com/kylealwyn/flexxed" data-icon="octicon-star" data-style="mega" data-count-href="/kylealwyn/flexxed/stargazers" data-count-api="/repos/kylealwyn/flexxed#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star kylealwyn/flexxed on GitHub">Star</a></div>
+        </div>
+      </section>
+          <section class="page-section" id="installation"><a name="installation"></a>
+            <div class="section-header">
+              <h2 class="section-title">installation</h2>
+              <p class="section-description">Find flexxed on your favorite package manager.</p>
+            </div>
+            <div class="section-example">
+              <div class="row">
+                <div class="col-xs-6">
+                  <h3>Bower</h3><code>bower install --save flexxed</code>
+                </div>
+                <div class="col-xs-6">
+                  <h3>NPM</h3><code>npm install --save flexxed</code>
                 </div>
               </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <h3>Bower</h3><code>bower install --save flexxed</code>
+            </div>
+          </section>
+          <section class="page-section" id="syntax"><a name="syntax"></a>
+            <div class="section-header">
+              <h2 class="section-title">syntax</h2>
+              <p class="section-description">Row. Column. Content. That's it.</p>
+            </div>
+            <div class="section-example">
+              <pre><code class="section-code html">
+                  <div class="row">
+                    <div class="col-xs">
+                      <h3>Look at me!</h3>
+                    </div>
+                  </div></code></pre>
+            </div>
+          </section>
+          <section class="page-section" id="responsive"><a name="responsive"></a>
+            <div class="section-header">
+              <h2 class="section-title">responsive</h2>
+              <p class="section-description">Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.</p>
+            </div>
+            <div class="section-example">
+                  <div class="section-code-example">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-6 col-sm-3 col-md-2 col-lg-1">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-12 col-sm-9 col-md-10 col-lg-11">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-10 col-sm-6 col-md-8 col-lg-10">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-2 col-sm-6 col-md-4 col-lg-2">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs-6 col-sm-3 col-md-2 col-lg-1">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs-12 col-sm-9 col-md-10 col-lg-11">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-10 col-sm-6 col-md-8 col-lg-10">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-2 col-sm-6 col-md-4 col-lg-2">
+                            <div class="box-row"></div>
+                          </div>
+                        </div></code></pre>
                   </div>
-                  <div class="col-xs-6">
-                    <h3>NPM</h3><code>npm install --save flexxed</code>
-                  </div>
-                </div>
-              </div>
-            </section><a name="syntax"></a>
-            <section class="page-section" id="syntax">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">syntax</h2>
-                  <p class="section-description">Row. Column. Content. That's it.</p>
-                </div>
-              </div>
-              <div class="container">
-                <pre><code class="section-code html">
+            </div>
+          </section>
+          <section class="page-section" id="fluid"><a name="fluid"></a>
+            <div class="section-header">
+              <h2 class="section-title">fluid</h2>
+              <p class="section-description">Percent based widths enable smooth and dynamic resizing.</p>
+            </div>
+            <div class="section-example">
+                  <div class="section-code-example">
                     <div class="row">
                       <div class="col-xs">
-                        <h3>Look at me!</h3>
+                        <div class="box-row"></div>
                       </div>
-                    </div></code></pre>
-              </div>
-            </section><a name="responsive"></a>
-            <section class="page-section" id="responsive">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">responsive</h2>
-                  <p class="section-description">Target specific screen sizes with responsive modifiers. All flexed classes have responsive siblings.</p>
-                </div>
-              </div>
-              <div class="container">
-                    <div class="section-code-example">
-                      <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-2 col-lg-1">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-11">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-10 col-sm-6 col-md-8 col-lg-10">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-2 col-sm-6 col-md-4 col-lg-2">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-2 col-lg-1">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs-12 col-sm-9 col-md-10 col-lg-11">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-10 col-sm-6 col-md-8 col-lg-10">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-2 col-sm-6 col-md-4 col-lg-2">
-                              <div class="box-row"></div>
-                            </div>
-                          </div></code></pre>
                     </div>
-              </div>
-            </section><a name="fluid"></a>
-            <section class="page-section" id="fluid">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">fluid</h2>
-                  <p class="section-description">Percent based widths enable smooth and dynamic resizing.</p>
-                </div>
-              </div>
-              <div class="container">
-                    <div class="section-code-example">
-                      <div class="row">
-                        <div class="col-xs">
-                          <div class="box-row"></div>
-                        </div>
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <div class="box-row"></div>
                       </div>
-                      <div class="row">
-                        <div class="col-xs-1">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs-11">
-                          <div class="box-row"></div>
-                        </div>
+                      <div class="col-xs-11">
+                        <div class="box-row"></div>
                       </div>
-                      <div class="row">
-                        <div class="col-xs-2">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs-10">
-                          <div class="box-row"></div>
-                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-2">
+                        <div class="box-row"></div>
                       </div>
-                      <div class="row">
-                        <div class="col-xs-3">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs-9">
-                          <div class="box-row"></div>
-                        </div>
+                      <div class="col-xs-10">
+                        <div class="box-row"></div>
                       </div>
-                      <div class="row">
-                        <div class="col-xs-4">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs-8">
-                          <div class="box-row"></div>
-                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-3">
+                        <div class="box-row"></div>
                       </div>
-                      <div class="row">
-                        <div class="col-xs-5">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs-7">
-                          <div class="box-row"></div>
-                        </div>
+                      <div class="col-xs-9">
+                        <div class="box-row"></div>
                       </div>
-                      <div class="row">
-                        <div class="col-xs-6">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs-6">
-                          <div class="box-row"></div>
-                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <div class="box-row"></div>
                       </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs">
-                              <div class="box-row"></div>
-                            </div>
+                      <div class="col-xs-8">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-5">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-7">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs">
+                            <div class="box-row"></div>
                           </div>
-                          <div class="row">
-                            <div class="col-xs-1">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs-11">
-                              <div class="box-row"></div>
-                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-1">
+                            <div class="box-row"></div>
                           </div>
-                          <div class="row">
-                            <div class="col-xs-2">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs-10">
-                              <div class="box-row"></div>
-                            </div>
+                          <div class="col-xs-11">
+                            <div class="box-row"></div>
                           </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-2">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs-10">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-3">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs-9">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-4">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs-8">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-5">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs-7">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="box-row"></div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+            </div>
+          </section>
+          <section class="page-section" id="offsets"><a name="offsets"></a>
+            <div class="section-header">
+              <h2 class="section-title">offsets</h2>
+              <p class="section-description">Push columns</p>
+            </div>
+            <div class="section-example">
+                  <div class="section-code-example">
+                    <div class="row">
+                      <div class="col-xs-1 col-xs-offset-11">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-2 col-xs-offset-10">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-3 col-xs-offset-9">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-4 col-xs-offset-8">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-5 col-xs-offset-7">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-6 col-xs-offset-6">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-7 col-xs-offset-5">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-8 col-xs-offset-4">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-9 col-xs-offset-3">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-10 col-xs-offset-2">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-11 col-xs-offset-1">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs-1 col-xs-offset-11">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-2 col-xs-offset-10">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-3 col-xs-offset-9">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-4 col-xs-offset-8">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-5 col-xs-offset-7">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-6 col-xs-offset-6">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-7 col-xs-offset-5">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-8 col-xs-offset-4">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-9 col-xs-offset-3">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-10 col-xs-offset-2">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-11 col-xs-offset-1">
+                            <div class="box-row"></div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+            </div>
+          </section>
+          <section class="page-section" id="automatic"><a name="automatic"></a>
+            <div class="section-header">
+              <h2 class="section-title">automatic</h2>
+              <p class="section-description">Add any number of generic columns to a row and let the grid do the math for you.</p>
+            </div>
+            <div class="section-example">
+                  <div class="section-code-example">
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box-row"></div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box-row"></div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs">
+                            <div class="box-row"></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs">
+                            <div class="box-row"></div>
+                          </div>
+                          <div class="col-xs">
+                            <div class="box-row"></div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+            </div>
+          </section>
+          <section class="page-section" id="nesting"><a name="nesting"></a>
+            <div class="section-header">
+              <h2 class="section-title">nesting</h2>
+              <p class="section-description">Nest all the grids you want.</p>
+            </div>
+            <div class="section-example">
+                  <div class="section-code-example">
+                    <div class="row">
+                      <div class="col-xs-7">
+                        <div class="box box-container">
                           <div class="row">
-                            <div class="col-xs-3">
-                              <div class="box-row"></div>
-                            </div>
                             <div class="col-xs-9">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-4">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs-8">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-5">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs-7">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-6">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs-6">
-                              <div class="box-row"></div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-              </div>
-            </section><a name="offsets"></a>
-            <section class="page-section" id="offsets">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">offsets</h2>
-                  <p class="section-description">Push columns</p>
-                </div>
-              </div>
-              <div class="container">
-                    <div class="section-code-example">
-                      <div class="row">
-                        <div class="col-xs-1 col-xs-offset-11">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-2 col-xs-offset-10">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-3 col-xs-offset-9">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-4 col-xs-offset-8">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-5 col-xs-offset-7">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-6 col-xs-offset-6">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-7 col-xs-offset-5">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-8 col-xs-offset-4">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-9 col-xs-offset-3">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-10 col-xs-offset-2">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-11 col-xs-offset-1">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs-1 col-xs-offset-11">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-2 col-xs-offset-10">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-3 col-xs-offset-9">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-4 col-xs-offset-8">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-5 col-xs-offset-7">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-6 col-xs-offset-6">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-7 col-xs-offset-5">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-8 col-xs-offset-4">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-9 col-xs-offset-3">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-10 col-xs-offset-2">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs-11 col-xs-offset-1">
-                              <div class="box-row"></div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-              </div>
-            </section><a name="automatic"></a>
-            <section class="page-section" id="automatic">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">automatic</h2>
-                  <p class="section-description">Add any number of generic columns to a row and let the grid do the math for you.</p>
-                </div>
-              </div>
-              <div class="container">
-                    <div class="section-code-example">
-                      <div class="row">
-                        <div class="col-xs">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs">
-                          <div class="box-row"></div>
-                        </div>
-                        <div class="col-xs">
-                          <div class="box-row"></div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs">
-                              <div class="box-row"></div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-xs">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs">
-                              <div class="box-row"></div>
-                            </div>
-                            <div class="col-xs">
-                              <div class="box-row"></div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-              </div>
-            </section><a name="nesting"></a>
-            <section class="page-section" id="nesting">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">nesting</h2>
-                  <p class="section-description">Nest all the grids you want.</p>
-                </div>
-              </div>
-              <div class="container">
-                    <div class="section-code-example">
-                      <div class="row">
-                        <div class="col-xs-7">
-                          <div class="box box-container">
-                            <div class="row">
-                              <div class="col-xs-9">
-                                <div class="box-first box-container">
-                                  <div class="row">
-                                    <div class="col-xs-4">
-                                      <div class="box-nested"></div>
-                                    </div>
-                                    <div class="col-xs-8">
-                                      <div class="box-nested"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-xs-3">
-                                <div class="box-first box-container">
-                                  <div class="row">
-                                    <div class="col-xs">
-                                      <div class="box-nested"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-xs-5">
-                          <div class="box box-container">
-                            <div class="row">
-                              <div class="col-xs-12">
-                                <div class="box-first box-container">
-                                  <div class="row">
-                                    <div class="col-xs-6">
-                                      <div class="box-nested"></div>
-                                    </div>
-                                    <div class="col-xs-6">
-                                      <div class="box-nested"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs-7">
-                              <div class="box box-container">
+                              <div class="box-first box-container">
                                 <div class="row">
-                                  <div class="col-xs-9">
-                                    <div class="box-first box-container">
-                                      <div class="row">
-                                        <div class="col-xs-4">
-                                          <div class="box-nested"></div>
-                                        </div>
-                                        <div class="col-xs-8">
-                                          <div class="box-nested"></div>
-                                        </div>
-                                      </div>
-                                    </div>
+                                  <div class="col-xs-4">
+                                    <div class="box-nested"></div>
                                   </div>
-                                  <div class="col-xs-3">
-                                    <div class="box-first box-container">
-                                      <div class="row">
-                                        <div class="col-xs">
-                                          <div class="box-nested"></div>
-                                        </div>
-                                      </div>
-                                    </div>
+                                  <div class="col-xs-8">
+                                    <div class="box-nested"></div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="col-xs-5">
-                              <div class="box box-container">
+                            <div class="col-xs-3">
+                              <div class="box-first box-container">
                                 <div class="row">
-                                  <div class="col-xs-12">
-                                    <div class="box-first box-container">
-                                      <div class="row">
-                                        <div class="col-xs-6">
-                                          <div class="box-nested"></div>
-                                        </div>
-                                        <div class="col-xs-6">
-                                          <div class="box-nested"></div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-              </div>
-            </section><a name="alignment"></a>
-            <section class="page-section" id="alignment">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">alignment</h2>
-                  <p class="section-description">Vertical and horizontal alignment has never been easier.</p>
-                </div>
-              </div>
-              <div class="container">
-                    <div class="section-code-example">
-                      <h3>.justify-start-*</h3>
-                      <div class="row">
-                        <div class="col-xs">
-                          <div class="box box-container">
-                            <div class="row justify-start-xs">
-                              <div class="col-xs-6">
-                                <div class="box-nested"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs">
-                              <div class="box box-container">
-                                <div class="row justify-start-xs">
-                                  <div class="col-xs-6">
-                                    <div class="box-nested"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-                    <div class="section-code-example">
-                      <h3>.justify-center-xs-*</h3>
-                      <div class="row">
-                        <div class="col-xs">
-                          <div class="box box-container">
-                            <div class="row justify-center-xs">
-                              <div class="col-xs-6">
-                                <div class="box-nested"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs">
-                              <div class="box box-container">
-                                <div class="row justify-center-xs">
-                                  <div class="col-xs-6">
-                                    <div class="box-nested"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-                    <div class="section-code-example">
-                      <h3>.justify-end-*</h3>
-                      <div class="row">
-                        <div class="col-xs">
-                          <div class="box box-container">
-                            <div class="row justify-end-xs">
-                              <div class="col-xs-6">
-                                <div class="box-nested"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs">
-                              <div class="box box-container">
-                                <div class="row justify-end-xs">
-                                  <div class="col-xs-6">
-                                    <div class="box-nested"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-                <p>Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes.</p>
-                    <div class="section-code-example">
-                      <div class="row">
-                        <div class="col-xs">
-                          <div class="box box-container">
-                            <div class="row justify-center-xs justify-end-sm justify-start-lg">
-                              <div class="col-xs-6">
-                                <div class="box-nested"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs">
-                              <div class="box box-container">
-                                <div class="row justify-center-xs justify-end-sm justify-start-lg">
-                                  <div class="col-xs-6">
-                                    <div class="box-nested"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-                    <div class="section-code-example">
-                      <h3>.align-top-*</h3>
-                      <div class="row align-top-xs">
-                        <div class="col-xs-6">
-                          <div class="box-large"></div>
-                        </div>
-                        <div class="col-xs-6">
-                          <div class="box"></div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row align-top-xs">
-                            <div class="col-xs-6">
-                              <div class="box-large"></div>
-                            </div>
-                            <div class="col-xs-6">
-                              <div class="box"></div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-                    <div class="section-code-example">
-                      <h3>.align-center-*</h3>
-                      <div class="row align-center-xs">
-                        <div class="col-xs-6">
-                          <div class="box-large"></div>
-                        </div>
-                        <div class="col-xs-6">
-                          <div class="box"></div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row align-center-xs">
-                            <div class="col-xs-6">
-                              <div class="box-large"></div>
-                            </div>
-                            <div class="col-xs-6">
-                              <div class="box"></div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-                    <div class="section-code-example">
-                      <h3>.align-bottom-*</h3>
-                      <div class="row align-bottom-xs">
-                        <div class="col-xs-6">
-                          <div class="box-large"></div>
-                        </div>
-                        <div class="col-xs-6">
-                          <div class="box"></div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row align-bottom-xs">
-                            <div class="col-xs-6">
-                              <div class="box-large"></div>
-                            </div>
-                            <div class="col-xs-6">
-                              <div class="box"></div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-              </div>
-            </section><a name="distribution"></a>
-            <section class="page-section" id="distribution">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">distribution</h2>
-                  <p class="section-description">Easily give your elements some room to breathe.</p>
-                </div>
-              </div>
-              <div class="container">
-                    <div class="section-code-example">
-                      <h3>.space-around-*</h3>
-                      <div class="box box-container">
-                        <div class="row space-around-xs">
-                          <div class="col-xs-2">
-                            <div class="box-nested"></div>
-                          </div>
-                          <div class="col-xs-2">
-                            <div class="box-nested"></div>
-                          </div>
-                          <div class="col-xs-2">
-                            <div class="box-nested"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="box box-container">
-                            <div class="row space-around-xs">
-                              <div class="col-xs-2">
-                                <div class="box-nested"></div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-nested"></div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-nested"></div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-                    <div class="section-code-example">
-                      <h3>.space-between-*</h3>
-                      <div class="box box-container">
-                        <div class="row space-between-xs">
-                          <div class="col-xs-2">
-                            <div class="box-nested"></div>
-                          </div>
-                          <div class="col-xs-2">
-                            <div class="box-nested"></div>
-                          </div>
-                          <div class="col-xs-2">
-                            <div class="box-nested"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="box box-container">
-                            <div class="row space-between-xs">
-                              <div class="col-xs-2">
-                                <div class="box-nested"></div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-nested"></div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-nested"></div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-                <p>You can also push elements to the opposite edge by using a filler <code>.col</code></p>
-                    <div class="section-code-example">
-                      <div class="box box-container">
-                        <div class="row">
-                          <div class="col-xs">
-                            <div class="box-nested"></div>
-                          </div>
-                          <div class="col-xs"></div>
-                          <div class="col-xs">
-                            <div class="box-nested"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="box box-container">
-                            <div class="row">
-                              <div class="col-xs">
-                                <div class="box-nested"></div>
-                              </div>
-                              <div class="col-xs"></div>
-                              <div class="col-xs">
-                                <div class="box-nested"></div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-              </div>
-            </section><a name="reordering"></a>
-            <section class="page-section" id="reordering">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">reordering</h2>
-                  <p class="section-description">Mix 'em up.</p>
-                </div>
-              </div>
-              <div class="container">
-                    <div class="section-code-example">
-                      <h3>.first-*</h3>
-                      <div class="row">
-                        <div class="col-xs-12">
-                          <div class="box box-container">
-                            <div class="row">
-                              <div class="col-xs-2">
-                                <div class="box-first">1</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-first">2</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-first">3</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-first">4</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-first">5</div>
-                              </div>
-                              <div class="col-xs-2 first-xs">
-                                <div class="box-nested">6</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs-12">
-                              <div class="box box-container">
-                                <div class="row">
-                                  <div class="col-xs-2">
-                                    <div class="box-first">1</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-first">2</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-first">3</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-first">4</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-first">5</div>
-                                  </div>
-                                  <div class="col-xs-2 first-xs">
-                                    <div class="box-nested">6</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-                    <div class="section-code-example">
-                      <h3>.last-*</h3>
-                      <div class="row">
-                        <div class="col-xs-12">
-                          <div class="box box-container">
-                            <div class="row">
-                              <div class="col-xs-2 last-xs">
-                                <div class="box-nested">1</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-first">2</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-first">3</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-first">4</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-first">5</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-first">6</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs-12">
-                              <div class="box box-container">
-                                <div class="row">
-                                  <div class="col-xs-2 last-xs">
-                                    <div class="box-nested">1</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-first">2</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-first">3</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-first">4</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-first">5</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-first">6</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-                <p>Or you can reverse all elements within the row.</p>
-                    <div class="section-code-example">
-                      <h3>.row.reverse-*</h3>
-                      <div class="row">
-                        <div class="col-xs-12">
-                          <div class="box box-container">
-                            <div class="row reverse-xs">
-                              <div class="col-xs-2">
-                                <div class="box-nested">1</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-nested">2</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-nested">3</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-nested">4</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-nested">5</div>
-                              </div>
-                              <div class="col-xs-2">
-                                <div class="box-nested">6</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="row">
-                            <div class="col-xs-12">
-                              <div class="box box-container">
-                                <div class="row reverse-xs">
-                                  <div class="col-xs-2">
-                                    <div class="box-nested">1</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-nested">2</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-nested">3</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-nested">4</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-nested">5</div>
-                                  </div>
-                                  <div class="col-xs-2">
-                                    <div class="box-nested">6</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div></code></pre>
-                    </div>
-              </div>
-            </section><a name="stacking"></a>
-            <section class="page-section" id="stacking">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">stacking</h2>
-                  <p class="section-description">By default, rows layout columns horizontally. However, many layouts call for a mix of the two.</p>
-                </div>
-              </div>
-              <div class="container">
-                    <div class="section-code-example">
-                      <h3>.vertical-*</h3>
-                      <div class="box box-container">
-                        <div class="row">
-                          <div class="col-xs flex-xs">
-                            <div class="box-nested fill-xs"></div>
-                          </div>
-                          <div class="col-xs flex-xs">
-                            <div class="box-nested fill-xs"></div>
-                          </div>
-                          <div class="col-xs">
-                            <div class="row vertical-xs">
-                              <div class="col-xs m-b-sm">
-                                <div class="box-nested"></div>
-                              </div>
-                              <div class="col-xs">
-                                <div class="box-nested"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <pre><code class="section-code html">
-                          <div class="box box-container">
-                            <div class="row">
-                              <div class="col-xs flex-xs">
-                                <div class="box-nested fill-xs"></div>
-                              </div>
-                              <div class="col-xs flex-xs">
-                                <div class="box-nested fill-xs"></div>
-                              </div>
-                              <div class="col-xs">
-                                <div class="row vertical-xs">
-                                  <div class="col-xs m-b-sm">
-                                    <div class="box-nested"></div>
-                                  </div>
                                   <div class="col-xs">
                                     <div class="box-nested"></div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div></code></pre>
-                    </div>
-              </div>
-            </section><a name="spacing"></a>
-            <section class="page-section" id="spacing">
-              <div class="section-header">
-                <div class="container">
-                  <h2 class="section-title">spacing</h2>
-                  <p class="section-description">Give 'em some room to breathe.</p>
-                </div>
-              </div>
-              <div class="container">
-                <h3>Margins</h3>
-                    <div class="section-code-example">
-                      <h3>.m-&lt;screen&gt;-&lt;size&gt;</h3>
-                      <div class="box box-container">
-                        <div class="row">
-                          <div class="col-xs-12 m-b-sm">
-                            <div class="box-nested">.m-b-sm</div>
-                          </div>
-                          <div class="col-xs-12">
-                            <div class="box-nested"></div>
                           </div>
                         </div>
                       </div>
-                      <pre><code class="section-code html">
-                          <div class="box box-container">
-                            <div class="row">
-                              <div class="col-xs-12 m-b-sm">
-                                <div class="box-nested">.m-b-sm</div>
-                              </div>
-                              <div class="col-xs-12">
-                                <div class="box-nested"></div>
+                      <div class="col-xs-5">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs-12">
+                              <div class="box-first box-container">
+                                <div class="row">
+                                  <div class="col-xs-6">
+                                    <div class="box-nested"></div>
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="box-nested"></div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                          </div></code></pre>
-                    </div>
-                <h3>Padding</h3>
-                    <div class="section-code-example">
-                      <h3>.p-&lt;screen&gt;-&lt;size&gt;</h3>
-                      <div class="box box-container">
-                        <div class="row">
-                          <div class="col-xs-12 m-b-sm">
-                            <div class="box-nested p-xl">.p-xl</div>
-                          </div>
-                          <div class="col-xs-12">
-                            <div class="box-nested p-t-lg">.p-t-sm</div>
                           </div>
                         </div>
                       </div>
-                      <pre><code class="section-code html">
-                          <div class="box box-container">
-                            <div class="row">
-                              <div class="col-xs-12 m-b-sm">
-                                <div class="box-nested p-xl">.p-xl</div>
-                              </div>
-                              <div class="col-xs-12">
-                                <div class="box-nested p-t-lg">.p-t-sm</div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs-7">
+                            <div class="box box-container">
+                              <div class="row">
+                                <div class="col-xs-9">
+                                  <div class="box-first box-container">
+                                    <div class="row">
+                                      <div class="col-xs-4">
+                                        <div class="box-nested"></div>
+                                      </div>
+                                      <div class="col-xs-8">
+                                        <div class="box-nested"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-xs-3">
+                                  <div class="box-first box-container">
+                                    <div class="row">
+                                      <div class="col-xs">
+                                        <div class="box-nested"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                          </div></code></pre>
-                    </div>
-              </div>
-            </section>
-        <section class="page-section">
-          <div class="container">
-            <h2>The End</h2>
-            <div class="row">
-              <div class="col"><span>Rewritten by <a href="https://github.com/alwynsays">Kyle</a> <a href="https://alwynsays.com">Alwyn</a> &amp; inspired by <a href="https://github.com/kristoferjoseph/flexboxgrid">Flexbox Grid</a></span></div>
+                          </div>
+                          <div class="col-xs-5">
+                            <div class="box box-container">
+                              <div class="row">
+                                <div class="col-xs-12">
+                                  <div class="box-first box-container">
+                                    <div class="row">
+                                      <div class="col-xs-6">
+                                        <div class="box-nested"></div>
+                                      </div>
+                                      <div class="col-xs-6">
+                                        <div class="box-nested"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
             </div>
-          </div>
-        </section>
-      </div>
-    </div>
+          </section>
+          <section class="page-section" id="alignment"><a name="alignment"></a>
+            <div class="section-header">
+              <h2 class="section-title">alignment</h2>
+              <p class="section-description">Vertical and horizontal alignment has never been easier.</p>
+            </div>
+            <div class="section-example">
+                  <div class="section-code-example">
+                    <h3>.justify-start-*</h3>
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box box-container">
+                          <div class="row justify-start-xs">
+                            <div class="col-xs-6">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs">
+                            <div class="box box-container">
+                              <div class="row justify-start-xs">
+                                <div class="col-xs-6">
+                                  <div class="box-nested"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+                  <div class="section-code-example">
+                    <h3>.justify-center-xs-*</h3>
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box box-container">
+                          <div class="row justify-center-xs">
+                            <div class="col-xs-6">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs">
+                            <div class="box box-container">
+                              <div class="row justify-center-xs">
+                                <div class="col-xs-6">
+                                  <div class="box-nested"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+                  <div class="section-code-example">
+                    <h3>.justify-end-*</h3>
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box box-container">
+                          <div class="row justify-end-xs">
+                            <div class="col-xs-6">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs">
+                            <div class="box box-container">
+                              <div class="row justify-end-xs">
+                                <div class="col-xs-6">
+                                  <div class="box-nested"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+              <p>Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes.</p>
+                  <div class="section-code-example">
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box box-container">
+                          <div class="row justify-center-xs justify-end-sm justify-start-lg">
+                            <div class="col-xs-6">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs">
+                            <div class="box box-container">
+                              <div class="row justify-center-xs justify-end-sm justify-start-lg">
+                                <div class="col-xs-6">
+                                  <div class="box-nested"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+                  <div class="section-code-example">
+                    <h3>.align-top-*</h3>
+                    <div class="row align-top-xs">
+                      <div class="col-xs-6">
+                        <div class="box-large"></div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="box"></div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row align-top-xs">
+                          <div class="col-xs-6">
+                            <div class="box-large"></div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="box"></div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+                  <div class="section-code-example">
+                    <h3>.align-center-*</h3>
+                    <div class="row align-center-xs">
+                      <div class="col-xs-6">
+                        <div class="box-large"></div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="box"></div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row align-center-xs">
+                          <div class="col-xs-6">
+                            <div class="box-large"></div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="box"></div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+                  <div class="section-code-example">
+                    <h3>.align-bottom-*</h3>
+                    <div class="row align-bottom-xs">
+                      <div class="col-xs-6">
+                        <div class="box-large"></div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="box"></div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row align-bottom-xs">
+                          <div class="col-xs-6">
+                            <div class="box-large"></div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="box"></div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+            </div>
+          </section>
+          <section class="page-section" id="distribution"><a name="distribution"></a>
+            <div class="section-header">
+              <h2 class="section-title">distribution</h2>
+              <p class="section-description">Easily give your elements some room to breathe.</p>
+            </div>
+            <div class="section-example">
+                  <div class="section-code-example">
+                    <h3>.space-around-*</h3>
+                    <div class="box box-container">
+                      <div class="row space-around-xs">
+                        <div class="col-xs-2">
+                          <div class="box-nested"></div>
+                        </div>
+                        <div class="col-xs-2">
+                          <div class="box-nested"></div>
+                        </div>
+                        <div class="col-xs-2">
+                          <div class="box-nested"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="box box-container">
+                          <div class="row space-around-xs">
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+                  <div class="section-code-example">
+                    <h3>.space-between-*</h3>
+                    <div class="box box-container">
+                      <div class="row space-between-xs">
+                        <div class="col-xs-2">
+                          <div class="box-nested"></div>
+                        </div>
+                        <div class="col-xs-2">
+                          <div class="box-nested"></div>
+                        </div>
+                        <div class="col-xs-2">
+                          <div class="box-nested"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="box box-container">
+                          <div class="row space-between-xs">
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+              <p>You can also push elements to the opposite edge by using a filler <code>.col</code></p>
+                  <div class="section-code-example">
+                    <div class="box box-container">
+                      <div class="row">
+                        <div class="col-xs">
+                          <div class="box-nested"></div>
+                        </div>
+                        <div class="col-xs"></div>
+                        <div class="col-xs">
+                          <div class="box-nested"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs">
+                              <div class="box-nested"></div>
+                            </div>
+                            <div class="col-xs"></div>
+                            <div class="col-xs">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+            </div>
+          </section>
+          <section class="page-section" id="reordering"><a name="reordering"></a>
+            <div class="section-header">
+              <h2 class="section-title">reordering</h2>
+              <p class="section-description">Mix 'em up.</p>
+            </div>
+            <div class="section-example">
+                  <div class="section-code-example">
+                    <h3>.first-*</h3>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs-2">
+                              <div class="box-first">1</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">2</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">3</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">4</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">5</div>
+                            </div>
+                            <div class="col-xs-2 first-xs">
+                              <div class="box-nested">6</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <div class="box box-container">
+                              <div class="row">
+                                <div class="col-xs-2">
+                                  <div class="box-first">1</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-first">2</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-first">3</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-first">4</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-first">5</div>
+                                </div>
+                                <div class="col-xs-2 first-xs">
+                                  <div class="box-nested">6</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+                  <div class="section-code-example">
+                    <h3>.last-*</h3>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs-2 last-xs">
+                              <div class="box-nested">1</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">2</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">3</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">4</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">5</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-first">6</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <div class="box box-container">
+                              <div class="row">
+                                <div class="col-xs-2 last-xs">
+                                  <div class="box-nested">1</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-first">2</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-first">3</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-first">4</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-first">5</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-first">6</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+              <p>Or you can reverse all elements within the row.</p>
+                  <div class="section-code-example">
+                    <h3>.row.reverse-*</h3>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="box box-container">
+                          <div class="row reverse-xs">
+                            <div class="col-xs-2">
+                              <div class="box-nested">1</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested">2</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested">3</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested">4</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested">5</div>
+                            </div>
+                            <div class="col-xs-2">
+                              <div class="box-nested">6</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <div class="box box-container">
+                              <div class="row reverse-xs">
+                                <div class="col-xs-2">
+                                  <div class="box-nested">1</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-nested">2</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-nested">3</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-nested">4</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-nested">5</div>
+                                </div>
+                                <div class="col-xs-2">
+                                  <div class="box-nested">6</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+            </div>
+          </section>
+          <section class="page-section" id="stacking"><a name="stacking"></a>
+            <div class="section-header">
+              <h2 class="section-title">stacking</h2>
+              <p class="section-description">By default, rows layout columns horizontally. However, many layouts call for a mix of the two.</p>
+            </div>
+            <div class="section-example">
+                  <div class="section-code-example">
+                    <h3>.vertical-*</h3>
+                    <div class="box box-container">
+                      <div class="row">
+                        <div class="col-xs flex-xs">
+                          <div class="box-nested fill-xs"></div>
+                        </div>
+                        <div class="col-xs flex-xs">
+                          <div class="box-nested fill-xs"></div>
+                        </div>
+                        <div class="col-xs">
+                          <div class="row vertical-xs">
+                            <div class="col-xs m-b-sm">
+                              <div class="box-nested"></div>
+                            </div>
+                            <div class="col-xs">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs flex-xs">
+                              <div class="box-nested fill-xs"></div>
+                            </div>
+                            <div class="col-xs flex-xs">
+                              <div class="box-nested fill-xs"></div>
+                            </div>
+                            <div class="col-xs">
+                              <div class="row vertical-xs">
+                                <div class="col-xs m-b-sm">
+                                  <div class="box-nested"></div>
+                                </div>
+                                <div class="col-xs">
+                                  <div class="box-nested"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+            </div>
+          </section>
+          <section class="page-section" id="spacing"><a name="spacing"></a>
+            <div class="section-header">
+              <h2 class="section-title">spacing</h2>
+              <p class="section-description">Give 'em some room to breathe.</p>
+            </div>
+            <div class="section-example">
+              <h3>Margins</h3>
+                  <div class="section-code-example">
+                    <h3>.m-&lt;screen&gt;-&lt;size&gt;</h3>
+                    <div class="box box-container">
+                      <div class="row">
+                        <div class="col-xs-12 m-b-sm">
+                          <div class="box-nested">.m-b-sm</div>
+                        </div>
+                        <div class="col-xs-12">
+                          <div class="box-nested"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs-12 m-b-sm">
+                              <div class="box-nested">.m-b-sm</div>
+                            </div>
+                            <div class="col-xs-12">
+                              <div class="box-nested"></div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+              <h3>Padding</h3>
+                  <div class="section-code-example">
+                    <h3>.p-&lt;screen&gt;-&lt;size&gt;</h3>
+                    <div class="box box-container">
+                      <div class="row">
+                        <div class="col-xs-12 m-b-sm">
+                          <div class="box-nested p-xl">.p-xl</div>
+                        </div>
+                        <div class="col-xs-12">
+                          <div class="box-nested p-t-lg">.p-t-sm</div>
+                        </div>
+                      </div>
+                    </div>
+                    <pre><code class="section-code html">
+                        <div class="box box-container">
+                          <div class="row">
+                            <div class="col-xs-12 m-b-sm">
+                              <div class="box-nested p-xl">.p-xl</div>
+                            </div>
+                            <div class="col-xs-12">
+                              <div class="box-nested p-t-lg">.p-t-sm</div>
+                            </div>
+                          </div>
+                        </div></code></pre>
+                  </div>
+            </div>
+          </section>
+      <section class="page-section">
+        <h2>The End</h2>
+        <div class="row">
+          <div class="col"><span>Rewritten by <a href="https://github.com/alwynsays">Kyle</a> <a href="https://alwynsays.com">Alwyn</a> &amp; inspired by <a href="https://github.com/kristoferjoseph/flexboxgrid">Flexbox Grid</a></span></div>
+        </div>
+      </section>
+    </main>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="example/highlight.pack.js"></script>
     <script src="example/index.js"></script>
     <script async src="https://www.google-analytics.com/analytics.js"></script>
