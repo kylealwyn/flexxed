@@ -320,7 +320,13 @@ pre {
     scrollbar-face-color: #795DA3;
     scrollbar-track-color: #bcaed1; }
   pre .hljs {
+    background: #F4F3F2;
     border: 1px solid #F4F3F2; }
+
+code {
+  background: #F4F3F2;
+  border-radius: 4px;
+  padding: 6px; }
 
 main {
   display: block;
@@ -426,6 +432,8 @@ main {
   margin: 1rem 0; }
   .section-code-example h3 {
     font-family: monospace; }
+  .section-code-example + .section-code-example {
+    margin-top: 3rem; }
 
 .highlight {
   background: #795DA3;

@@ -169,8 +169,15 @@ pre {
   @include scrollbars(0.5rem, $primary);
 
   .hljs {
+    background: $lt-gray;
     border: 1px solid $lt-gray;
   }
+}
+
+code {
+  background: $lt-gray;
+  border-radius: 4px;
+  padding: 6px;
 }
 
 main {
@@ -307,6 +314,10 @@ main {
 
   h3 {
     font-family: monospace;
+  }
+
+  + .section-code-example {
+    margin-top: 3rem;
   }
 }
 
