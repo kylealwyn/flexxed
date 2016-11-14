@@ -4,7 +4,7 @@
   "description": "The last grid you'll ever need.",
   "main": "dist/flexxed.css",
   "authors": [
-    "@alwynsays"
+    "@kylealwyn"
   ],
   "license": "MIT",
   "keywords": [
@@ -16,7 +16,7 @@
     "scss"
   ],
   "moduleType": [],
-  "homepage": "https://github.com/alwynsays/flexxed",
+  "homepage": "https://github.com/kylealwyn/flexxed",
   "ignore": [
     "**/.*",
     "node_modules",
