@@ -7,10 +7,11 @@ html
     meta(name="description" content="Flexxed is a CSS grid system based on the latest Flexbox standards. It's the last grid you'll ever need.")
 
     title Flexxed. A CSS grid based on flexbox
+    script(src="/assets/javascripts/protocol.js")
 
     link(rel='stylesheet', type='text/css', href='example/example.css')
     link(rel='stylesheet', type='text/css', href='dist/flexxed.css')
-    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Prompt:400,800')
+    link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Prompt:400,800')
   body
     mixin code(className)
       div.section-code-example
@@ -47,7 +48,7 @@ html
           p.hero-description A CSS grid system based on the lastest Flexbox standards. It's the last grid you'll ever need.
           .hero-buttons
             a(class="github-button"
-              href="https://github.com/kylealwyn/flexxed"
+              href="//github.com/kylealwyn/flexxed"
               data-icon="octicon-star"
               data-style="mega"
               data-count-href="/kylealwyn/flexxed/stargazers"
@@ -385,9 +386,9 @@ html
       section.page-section
         .text-center
           h2 The End
-          span A rewrite of #[a(href="https://github.com/kristoferjoseph/flexboxgrid") Flexbox Grid]  by #[a(href="https://github.com/kylealwyn") Kyle] #[a(href="https://kylealwyn.com") Alwyn]
+          span A rewrite of #[a(href="//github.com/kristoferjoseph/flexboxgrid") Flexbox Grid]  by #[a(href="//github.com/kylealwyn") Kyle] #[a(href="//kylealwyn.com") Alwyn]
 
-    script(async defer src="https://buttons.github.io/buttons.js")
+    script(async defer src="//buttons.github.io/buttons.js")
     script(src="example/highlight.pack.js")
     script(src="example/index.js")
     script(src="/assets/javascripts/analytics.js")
