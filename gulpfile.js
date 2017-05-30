@@ -7,7 +7,6 @@ const pug = require('gulp-pug');
 const cleanCSS = require('gulp-clean-css');
 const join = require('path').join;
 
-
 const paths = {
   src: join(__dirname, 'source'),
   example: join(__dirname, 'example'),
