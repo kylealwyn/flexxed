@@ -11,7 +11,7 @@ $screen-md: 64em !default;
 $screen-lg: 75em !default;
 $screen-xl: 84em !default;
 
-$screens: (
+$breakpoints: (
   xs: 0,
   sm: $screen-sm,
   md: $screen-md,

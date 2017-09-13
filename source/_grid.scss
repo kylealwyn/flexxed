@@ -76,7 +76,7 @@ $alignments: (
   padding-left: $half-gutter-width;
 }
 
-@each $screenTarget, $screenWidth in $screens {
+@each $screenTarget, $screenWidth in $breakpoints {
   @include grid($screenTarget, $screenWidth) {
     $columnName: #{$columnPrefix}-#{$screenTarget};
 
