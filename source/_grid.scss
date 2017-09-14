@@ -1,14 +1,4 @@
-@mixin grid($screenTarget, $screenWidth) {
-  @if $screenTarget == xs {
-    @content;
-  }
 
-  @else {
-    @media (min-width: #{$screenWidth}) {
-      @content;
-    }
-  }
-}
 
 $alignments: (
   justify-start: (
@@ -76,9 +66,9 @@ $alignments: (
   padding-left: $half-gutter-width;
 }
 
-@each $screenTarget, $screenWidth in $breakpoints {
-  @include grid($screenTarget, $screenWidth) {
-    $columnName: #{$columnPrefix}-#{$screenTarget};
+@each $breakpoint, $width in $breakpoints {
+  @include respond-down($breakpoint, $width) {
+    $columnName: #{$columnPrefix}-#{$breakpoint};
 
     @for $i from 1 through $grid-columns {
       $col-width: percentage($i/$grid-columns);
@@ -104,36 +94,44 @@ $alignments: (
     }
 
     @each $alignment, $classes in $alignments {
-      .#{$alignment}-#{$screenTarget} {
+      .#{$alignment}-#{$breakpoint} {
         @each $classKey, $classValue in $classes {
           #{$classKey}: #{$classValue}
         }
       }
     }
 
-    .flex-#{$screenTarget} {
+    .flex-#{$breakpoint} {
       display: flex;
     }
 
-    .fill-#{$screenTarget} {
+    .fill-#{$breakpoint} {
       flex: 1;
     }
 
-    .vertical-#{$screenTarget} {
+    .vertical-#{$breakpoint} {
       flex-direction: column;
     }
 
-    .reverse-#{$screenTarget} {
+    .reverse-#{$breakpoint} {
       flex-direction: row-reverse;
     }
 
-    .collapsed-#{$screenTarget},
-    .vertical-#{$screenTarget} {
+    .collapsed-#{$breakpoint},
+    .vertical-#{$breakpoint} {
       margin: 0;
 
       [class*='col-'] {
         padding: 0;
       }
+    }
+
+    .hidden-#{$breakpoint} {
+      display: none;
+    }
+
+    .visible-#{$breakpoint} {
+      display: inline-block;
     }
   }
 }
